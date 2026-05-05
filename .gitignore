@@ -1,0 +1,9 @@
+FreelancingApi/bin
+FreelancingApi/Properties
+FreelancingApi/obj
+
+Frontend/node_modules
+Frontend/bun.lock
+Frontend/package-lock.json
+Frontend/
+
