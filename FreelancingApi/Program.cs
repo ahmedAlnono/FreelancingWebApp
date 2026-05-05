@@ -193,7 +193,7 @@ builder.Services.AddScoped<IJobService, JobService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddSingleton<ICacheService, CacheService>();
 builder.Services.AddScoped<IFileUploadService, FileUploadService>();
-
+builder.Services.AddScoped<IStatisticService, StatisticService>();
 
 builder.Services.AddSignalR(options =>
 {

@@ -20,7 +20,7 @@ public class User : BaseEntity
     public string? Avatar { get; set; }
     public string? Location { get; set; }
     public string? Country { get; set; }
-    public string? Bio { get; set; }
+    public string? Bio { get; set; } = "";
     public string UserType { get; set; } = "freelancer"; // "freelancer" or "client"
     public bool IsVerified { get; set; } = false;
     public bool IsTopRated { get; set; } = false;

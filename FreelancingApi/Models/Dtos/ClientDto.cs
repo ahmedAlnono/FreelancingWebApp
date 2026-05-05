@@ -14,4 +14,5 @@ public class ClientInfoDto
     public int JobsPosted { get; set; }
     public int HireRate { get; set; }
     public bool IsVerified { get; set; }
+    public List<string> Skills {get;set;} = [];
 }
