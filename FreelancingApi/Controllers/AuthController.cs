@@ -3,11 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FreelancingApi.Data;
 using FreelancingApi.Services.Interfaces;
-using Microsoft.AspNetCore.Identity.Data;
 using FreelancingApi.Models.Dtos;
 using FreelancingApi.Models.Entities;
 using System.Security.Claims;
-using FreelancingApi.Helpers;
 
 namespace FreelancingApi.Controllers;
 
@@ -17,7 +15,7 @@ public class AuthController(
     AppDbContext context,
     ITokenService tokenService,
     ILogger<AuthController> logger,
-    JwtSettings jwtSettings) : ControllerBase
+    IConfiguration configuration) : ControllerBase
 {
     [HttpPost("register")]
     public async Task<IActionResult> Register([FromBody] RegisterRequestDto request)
@@ -43,12 +41,34 @@ public class AuthController(
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
                 FirstName = request.FirstName ?? string.Empty,
                 LastName = request.LastName ?? string.Empty,
-                Role = "User",
+                Role = request.UserType == "client" ? "Client" : "Freelancer",
+                UserType = request.UserType,
                 IsActive = true,
                 CreatedAt = DateTime.UtcNow
             };
 
             context.Users.Add(user);
+            await context.SaveChangesAsync();
+
+            // Create Profile based on UserType
+            if (user.UserType == "client")
+            {
+                var clientProfile = new ClientProfile
+                {
+                    UserId = user.Id,
+                    CreatedAt = DateTime.UtcNow
+                };
+                context.ClientProfiles.Add(clientProfile);
+            }
+            else
+            {
+                var freelancerProfile = new FreelancerProfile
+                {
+                    UserId = user.Id,
+                    CreatedAt = DateTime.UtcNow
+                };
+                context.FreelancerProfiles.Add(freelancerProfile);
+            }
             await context.SaveChangesAsync();
 
             // Generate tokens
@@ -71,7 +91,7 @@ public class AuthController(
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    public async Task<IActionResult> Login([FromBody] LoginRequestDto request)
     {
         try
         {
@@ -258,7 +278,7 @@ public class AuthController(
             Token = refreshToken,
             JwtId = jwtId,
             UserId = user.Id,
-            ExpiryDate = DateTime.UtcNow.AddDays(jwtSettings.RefreshTokenExpirationDays),
+            ExpiryDate = DateTime.UtcNow.AddDays(double.Parse(configuration["JwtSettings:RefreshTokenExpirationDays"]!)),
             IsRevoked = false,
             IsUsed = false,
             CreatedAt = DateTime.UtcNow

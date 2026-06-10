@@ -2,38 +2,35 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using FreelancingApi.Helpers;
 using FreelancingApi.Models.Entities;
 using FreelancingApi.Services.Interfaces;
 
 namespace FreelancingApi.Services.Implementaions;
 
-public class TokenService(IOptions<JwtSettings> jwtSettings) : ITokenService
+public class TokenService(IConfiguration configuration) : ITokenService
 {
-    private readonly JwtSettings _jwtSettings = jwtSettings.Value;
 
     public async Task<(string AccessToken, DateTime Expiry)> GenerateAccessTokenAsync(User user)
     {
         var claims = new List<Claim>
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            new Claim(JwtRegisteredClaimNames.UniqueName, user.Username),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role ?? "User")
+            new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new(JwtRegisteredClaimNames.Email, user.Email),
+            new(JwtRegisteredClaimNames.UniqueName, user.Username),
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new(ClaimTypes.Email, user.Email),
+            new(ClaimTypes.Role, user.UserType ?? "Freelancer")
         };
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"]!));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-        var expiry = DateTime.UtcNow.AddMinutes(_jwtSettings.AccessTokenExpirationMinutes);
+        var expiry = DateTime.UtcNow.AddMinutes(int.Parse(configuration["JwtSettings:AccessTokenExpirationMinutes"]!));
 
         var token = new JwtSecurityToken(
-            issuer: _jwtSettings.Issuer,
-            audience: _jwtSettings.Audience,
+            issuer: configuration["JwtSettings:Issuer"],
+            audience: configuration["JwtSettings:Audience"],
             claims: claims,
             expires: expiry,
             signingCredentials: credentials
@@ -61,9 +58,9 @@ public class TokenService(IOptions<JwtSettings> jwtSettings) : ITokenService
             ValidateAudience = true,
             ValidateLifetime = false, // Don't validate expiry for refresh
             ValidateIssuerSigningKey = true,
-            ValidIssuer = _jwtSettings.Issuer,
-            ValidAudience = _jwtSettings.Audience,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret)),
+            ValidIssuer = configuration["JwtSettings:Issuer"],
+            ValidAudience = configuration["JwtSettings:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"]!)),
             ClockSkew = TimeSpan.Zero
         };
 

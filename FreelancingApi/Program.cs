@@ -1,7 +1,6 @@
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.RateLimiting;
-using FreelancingApi.Helpers;
 using FreelancingApi.Services.Interfaces;
 using FreelancingApi.Services.Implementaions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -20,6 +19,8 @@ using FreelancingApi.Hubs;
 using Hangfire;
 using Hangfire.Storage.SQLite;
 using AspNetCoreRateLimit;
+using Stripe;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,11 +31,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-builder.Services.Configure<JwtSettings>(jwtSettings);
 
 
-var secret = jwtSettings["Secret"] ?? throw new Exception("JWT Secret not configured");
+var secret = builder.Configuration["JwtSettings:Secret"] ?? throw new Exception("JWT Secret not configured");
 var key = Encoding.ASCII.GetBytes(secret);
 builder.Services.AddAuthentication(options =>
 {
@@ -52,8 +51,8 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true, // Validate expiry
         ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings["Issuer"],
-        ValidAudience = jwtSettings["Audience"],
+        ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
+        ValidAudience = builder.Configuration["JwtSettings:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(key),
         ClockSkew = TimeSpan.Zero // No grace period
     };
@@ -99,7 +98,7 @@ builder.Services.AddControllers()
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
         options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+        options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
     });
 
 // Memory Cache
@@ -138,10 +137,11 @@ builder.Services.AddSwaggerGen(c =>
     });
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    if (File.Exists(xmlPath))
+        if (System.IO.File.Exists(xmlPath))
     {
         c.IncludeXmlComments(xmlPath);
     }
+
 });
 
 builder.Services.AddOutputCache(options =>
@@ -180,6 +180,15 @@ builder.Services.AddScoped<IMinioClient>(sp =>
         .Build();
 });
 
+
+// Configure Stripe
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+// Add Stripe services
+// builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+builder.Services.AddSingleton<StripeClient>(provider => 
+    new StripeClient(builder.Configuration["Stripe:SecretKey"]));
+
 builder.Services.AddMemoryCache();
 builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
 builder.Services.AddInMemoryRateLimiting();
@@ -188,9 +197,11 @@ builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>()
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IJobRepository, JobRepository>();
+builder.Services.AddScoped<IFreelancerRepository, FreelancerRepository>();
+builder.Services.AddScoped<ITokenService, FreelancingApi.Services.Implementaions.TokenService>();
 // Services
 builder.Services.AddScoped<IJobService, JobService>();
-builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IReviewService, FreelancingApi.Services.Implementaions.ReviewService>();
 builder.Services.AddSingleton<ICacheService, CacheService>();
 builder.Services.AddScoped<IFileUploadService, FileUploadService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
@@ -225,10 +236,24 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.InstanceName = "FreelancingApi_";
 });
 
+
 // Add response caching middleware
 builder.Services.AddResponseCaching();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.SetIsOriginAllowed(origin => true)
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

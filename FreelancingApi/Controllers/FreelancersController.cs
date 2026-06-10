@@ -9,7 +9,10 @@ namespace FreelancingApi.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [AllowAnonymous]
-public class FreelancersController(IUnitOfWork unitOfWork, IMapper mapper) : ControllerBase
+public class FreelancersController(
+    IUnitOfWork unitOfWork,
+    IMapper mapper,
+    IFreelancerRepository freelancerRepository) : ControllerBase
 {
     [HttpGet]
     public async Task<ActionResult<ApiResponse<PagedResult<FreelancerDto>>>> GetFreelancers(
@@ -17,21 +20,27 @@ public class FreelancersController(IUnitOfWork unitOfWork, IMapper mapper) : Con
         [FromQuery] string? skills,
         [FromQuery] decimal? minRate,
         [FromQuery] decimal? maxRate,
-        [FromQuery] decimal? minRating,
         [FromQuery] string? availability,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 20)
     {
-        var query = unitOfWork.Users
-            .GetAsync(u => u.UserType == "freelancer" && u.IsActive && !u.IsDeleted);
-        
-        // Apply filters (simplified - you'd implement this properly)
-        var freelancers = (await query).ToList();
+        var freelnacerFilterParams = new FreelnacerFilterParams
+        {
+            Search = search,
+            Skills= skills,
+            MinRate = minRate,
+            MaxRate = maxRate,
+            Availability = availability,
+            Page = page,
+            PageSize = pageSize
+        };
+        var query = await freelancerRepository.GetUsersWithFilter(freelnacerFilterParams);
+        var freelancers = query.ToList();
         var freelancerDtos = mapper.Map<List<FreelancerDto>>(freelancers);
         
         var result = new PagedResult<FreelancerDto>
         {
-            Items = [.. freelancerDtos.Skip((page - 1) * pageSize).Take(pageSize)],
+            Items = freelancerDtos,
             TotalCount = freelancerDtos.Count,
             PageNumber = page,
             PageSize = pageSize

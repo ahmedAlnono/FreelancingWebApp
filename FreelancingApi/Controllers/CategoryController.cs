@@ -6,19 +6,20 @@ using FreelancingApi.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
+using StackExchange.Redis;
 
 namespace FreelancingApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[AllowAnonymous]
+// [AllowAnonymous]
 public class CategoriesController(
     IUnitOfWork unitOfWork,
     IMapper mapper,
     ICacheService cacheService
 ) : ControllerBase
 {
-
+    [AllowAnonymous]
     [HttpGet]
     public async Task<ActionResult<ApiResponse<List<CategoryDto>>>> GetAllCategories()
     {
@@ -30,6 +31,7 @@ public class CategoriesController(
         return Ok(ApiResponse<List<CategoryDto>>.Ok(categories));
     }
 
+    [AllowAnonymous]
     [HttpGet("{id:int}")]
     public async Task<ActionResult<ApiResponse<CategoryDto>>> GetCategoryById(int id)
     {
@@ -41,6 +43,7 @@ public class CategoriesController(
         return Ok(ApiResponse<CategoryDto>.Ok(mapper.Map<CategoryDto>(category)));
     }
 
+    [AllowAnonymous]
     [HttpGet("slug/{slug}")]
     public async Task<ActionResult<ApiResponse<CategoryDto>>> GetCategoryBySlug(string slug)
     {
@@ -52,5 +55,21 @@ public class CategoriesController(
             return NotFound(ApiResponse<CategoryDto>.Fail($"Category '{slug}' not found"));
 
         return Ok(ApiResponse<CategoryDto>.Ok(mapper.Map<CategoryDto>(category)));
+    }
+    [Authorize(Roles = "Admin")]
+    [HttpPost("add")]
+    public async Task<ActionResult> CreateCategory(CreateCategoryDto dto)
+    {
+        try
+        {
+            var newCat = mapper.Map<Category>(dto);
+            var category = await unitOfWork.Categories.AddAsync(newCat);
+            return Ok(mapper.Map<CategoryDto>(category));
+        }
+        catch (System.Exception ex)
+        {
+            BadRequest(ex.Message);
+            throw;
+        }
     }
 }

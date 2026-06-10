@@ -1,4 +1,3 @@
-// Repositories/JobRepository.cs
 using FreelancingApi.Data;
 using FreelancingApi.Models.Entities;
 using FreelancingApi.Repositories.Interfaces;
@@ -8,11 +7,11 @@ namespace FreelancingApi.Repositories.Implementations;
 
 public class JobRepository(AppDbContext context) : GenericRepository<Job>(context), IJobRepository
 {
-    protected readonly DbSet<Job> _dbSet = context.Jobs;
+    protected readonly DbSet<Job> JobsDb = context.Jobs;
 
     public async Task<IReadOnlyList<Job>> GetJobsWithFiltersAsync(JobFilterParams filters)
     {
-        var query = _dbSet
+        var query = JobsDb
             .Include(j => j.Category)
             .Include(j => j.Client)
                 .ThenInclude(c => c.ClientProfile)
@@ -67,7 +66,7 @@ public class JobRepository(AppDbContext context) : GenericRepository<Job>(contex
     
     public async Task<Job?> GetJobWithDetailsAsync(int id)
     {
-        return await _dbSet
+        return await JobsDb
             .Include(j => j.Category)
             .Include(j => j.Client)
                 .ThenInclude(c => c.ClientProfile)
@@ -81,6 +80,6 @@ public class JobRepository(AppDbContext context) : GenericRepository<Job>(contex
     
     public async Task<int> GetJobsCountByCategoryAsync(int categoryId)
     {
-        return await _dbSet.CountAsync(j => j.CategoryId == categoryId && j.Status == "open");
+        return await JobsDb.CountAsync(j => j.CategoryId == categoryId && j.Status == "open");
     }
 }

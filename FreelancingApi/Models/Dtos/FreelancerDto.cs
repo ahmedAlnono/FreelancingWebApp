@@ -21,6 +21,17 @@ public class FreelancerDto
     public List<string> Skills { get; set; } = [];
 }
 
+public class FreelnacerFilterParams
+{
+    public string? Search { get; set; } 
+    public string? Skills { get; set; }
+    public decimal? MinRate { get; set; }
+    public decimal? MaxRate { get; set; }
+    public string? Availability { get; set; }
+    public int Page { get; set; } =1;
+    public int PageSize { get; set; } =20;
+}
+
 public class FreelancerDetailDto : FreelancerDto
 {
     public string Bio { get; set; } = string.Empty;

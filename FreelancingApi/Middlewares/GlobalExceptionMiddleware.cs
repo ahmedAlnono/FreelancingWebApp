@@ -12,15 +12,7 @@ public class GlobalExceptionMiddleware(
 
     public async Task InvokeAsync(HttpContext context)
     {
-        try
-        {
             await next(context);
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "An unhandled exception occurred");
-            await HandleExceptionAsync(context, ex);
-        }
     }
     
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)

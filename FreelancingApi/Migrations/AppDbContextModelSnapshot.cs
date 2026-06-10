@@ -130,7 +130,171 @@ namespace FreelancingApi.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("ClientProfile");
+                    b.ToTable("ClientProfile", (string)null);
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.ConnectedAccount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AccountStatus")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("ChargesEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Country")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("DefaultCurrency")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsOnboarded")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("OnboardedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("PayoutsEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("StripeAccountId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StripeAccountId")
+                        .IsUnique();
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ConnectedAccounts");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Escrow", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("DisputeDeadline")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("DisputeReason")
+                        .HasColumnType("text");
+
+                    b.Property<string>("DisputeResolution")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("HeldAmount")
+                        .HasColumnType("numeric");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("JobId")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("ReleasedAmount")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StripePaymentIntentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("numeric");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("JobId")
+                        .IsUnique();
+
+                    b.ToTable("Escrows");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.EscrowRelease", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("EscrowId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("MilestoneId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("ReleasedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StripeTransferId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EscrowId");
+
+                    b.HasIndex("MilestoneId");
+
+                    b.ToTable("EscrowReleases");
                 });
 
             modelBuilder.Entity("FreelancingApi.Models.Entities.FreelancerProfile", b =>
@@ -200,7 +364,7 @@ namespace FreelancingApi.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("FreelancerProfile");
+                    b.ToTable("FreelancerProfile", (string)null);
                 });
 
             modelBuilder.Entity("FreelancingApi.Models.Entities.Job", b =>
@@ -466,6 +630,91 @@ namespace FreelancingApi.Migrations
                     b.HasIndex("ProposalId");
 
                     b.ToTable("Milestones");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Payment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("ClientId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<decimal>("FreelancerAmount")
+                        .HasColumnType("numeric");
+
+                    b.Property<int>("FreelancerId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<int>("JobId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("MilestoneId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("PaidAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("PlatformFee")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("RefundReason")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("RefundedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("ReleasedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StripePaymentIntentId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StripeTransferId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.HasIndex("FreelancerId");
+
+                    b.HasIndex("JobId");
+
+                    b.HasIndex("MilestoneId");
+
+                    b.HasIndex("StripePaymentIntentId")
+                        .IsUnique();
+
+                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("FreelancingApi.Models.Entities.Portfolio", b =>
@@ -821,6 +1070,56 @@ namespace FreelancingApi.Migrations
                     b.ToTable("UserSkills");
                 });
 
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Withdrawal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("FailureReason")
+                        .HasColumnType("text");
+
+                    b.Property<int>("FreelancerId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("ProcessedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("StripeTransferId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FreelancerId");
+
+                    b.HasIndex("StripeTransferId")
+                        .IsUnique();
+
+                    b.ToTable("Withdrawals");
+                });
+
             modelBuilder.Entity("FreelancingApi.Models.Entities.WorkHistory", b =>
                 {
                     b.Property<int>("Id")
@@ -927,6 +1226,47 @@ namespace FreelancingApi.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("FreelancingApi.Models.Entities.ConnectedAccount", b =>
+                {
+                    b.HasOne("FreelancingApi.Models.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Escrow", b =>
+                {
+                    b.HasOne("FreelancingApi.Models.Entities.Job", "Job")
+                        .WithMany()
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Job");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.EscrowRelease", b =>
+                {
+                    b.HasOne("FreelancingApi.Models.Entities.Escrow", "Escrow")
+                        .WithMany("Releases")
+                        .HasForeignKey("EscrowId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FreelancingApi.Models.Entities.Milestone", "Milestone")
+                        .WithMany()
+                        .HasForeignKey("MilestoneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Escrow");
+
+                    b.Navigation("Milestone");
+                });
+
             modelBuilder.Entity("FreelancingApi.Models.Entities.FreelancerProfile", b =>
                 {
                     b.HasOne("FreelancingApi.Models.Entities.User", "User")
@@ -1013,6 +1353,39 @@ namespace FreelancingApi.Migrations
                         .IsRequired();
 
                     b.Navigation("Proposal");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Payment", b =>
+                {
+                    b.HasOne("FreelancingApi.Models.Entities.User", "Client")
+                        .WithMany()
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FreelancingApi.Models.Entities.User", "Freelancer")
+                        .WithMany()
+                        .HasForeignKey("FreelancerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FreelancingApi.Models.Entities.Job", "Job")
+                        .WithMany()
+                        .HasForeignKey("JobId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FreelancingApi.Models.Entities.Milestone", "Milestone")
+                        .WithMany()
+                        .HasForeignKey("MilestoneId");
+
+                    b.Navigation("Client");
+
+                    b.Navigation("Freelancer");
+
+                    b.Navigation("Job");
+
+                    b.Navigation("Milestone");
                 });
 
             modelBuilder.Entity("FreelancingApi.Models.Entities.Portfolio", b =>
@@ -1106,6 +1479,17 @@ namespace FreelancingApi.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Withdrawal", b =>
+                {
+                    b.HasOne("FreelancingApi.Models.Entities.User", "Freelancer")
+                        .WithMany()
+                        .HasForeignKey("FreelancerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Freelancer");
+                });
+
             modelBuilder.Entity("FreelancingApi.Models.Entities.WorkHistory", b =>
                 {
                     b.HasOne("FreelancingApi.Models.Entities.FreelancerProfile", "FreelancerProfile")
@@ -1152,6 +1536,11 @@ namespace FreelancingApi.Migrations
                     b.Navigation("Jobs");
 
                     b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("FreelancingApi.Models.Entities.Escrow", b =>
+                {
+                    b.Navigation("Releases");
                 });
 
             modelBuilder.Entity("FreelancingApi.Models.Entities.FreelancerProfile", b =>

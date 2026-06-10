@@ -41,24 +41,6 @@ public class UploadController(
         return Ok(ApiResponse<string>.Ok(imageUrl, "Profile image uploaded successfully"));
     }
 
-    [HttpPost("portfolio")]
-    public async Task<ActionResult<ApiResponse<string>>> UploadPortfolioImage(IFormFile file, int portfolioId)
-    {
-        var userId = GetUserId();
-
-        var imageUrl = await fileUploadService.UploadPortfolioImageAsync(file, portfolioId);
-
-        // Update portfolio image in database
-        var portfolio = await unitOfWork.Portfolios.GetByIdAsync(portfolioId);
-        if (portfolio != null && portfolio.FreelancerProfile.UserId == userId)
-        {
-            portfolio.ImageUrl = imageUrl;
-            await unitOfWork.Portfolios.UpdateAsync(portfolio);
-            await unitOfWork.CompleteAsync();
-        }
-
-        return Ok(ApiResponse<string>.Ok(imageUrl, "Portfolio image uploaded successfully"));
-    }
 
     [HttpPost("resume")]
     public async Task<ActionResult<ApiResponse<string>>> UploadResume(IFormFile file)

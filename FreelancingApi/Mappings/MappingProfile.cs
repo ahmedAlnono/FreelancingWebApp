@@ -57,7 +57,9 @@ namespace FreelancingApi.Mappings
                 .ForMember(dest => dest.Level,
                     opt => opt.MapFrom(src => src.FreelancerProfile!.Level))
                 .ForMember(dest => dest.IsTopRated,
-                    opt => opt.MapFrom(src => src.IsTopRated));
+                    opt => opt.MapFrom(src => src.IsTopRated))
+                .ForMember(dest => dest.Avatar,
+                opt => opt.MapFrom(src => src.Avatar));
 
             CreateMap<User, FreelancerDetailDto>()
                 .IncludeBase<User, FreelancerDto>()

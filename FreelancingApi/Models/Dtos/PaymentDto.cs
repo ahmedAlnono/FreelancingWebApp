@@ -1,0 +1,11 @@
+// DTOs
+public class DisputeRequest { public string Reason { get; set; } = string.Empty; }
+public class WithdrawalRequest { public decimal Amount { get; set; } }
+public class BalanceDto { public decimal AvailableBalance { get; set; } public string Currency { get; set; } = string.Empty; }
+public class PaymentIntentResult { public string ClientSecret { get; set; } = string.Empty; public string PaymentIntentId { get; set; } = string.Empty; }
+public class PaymentResult { public bool Success { get; set; } public string PaymentIntentId { get; set; } = string.Empty; public decimal Amount { get; set; } public string Message { get; set; } = string.Empty; }
+public class CreatePaymentIntentDto { public int JobId { get; set; } public int FreelancerId { get; set; } public int? MilestoneId { get; set; } public decimal Amount { get; set; } public bool TransferToFreelancer { get; set; } }
+public class ConnectedAccountDto { public int Id { get; set; } public string StripeAccountId { get; set; } = string.Empty; public bool IsOnboarded { get; set; } public string AccountStatus { get; set; } = string.Empty; public bool ChargesEnabled { get; set; } public bool PayoutsEnabled { get; set; } public DateTime? OnboardedAt { get; set; } }
+public class EscrowDto { public int Id { get; set; } public int JobId { get; set; } public decimal TotalAmount { get; set; } public decimal ReleasedAmount { get; set; } public decimal HeldAmount { get; set; } public string Status { get; set; } = string.Empty; public DateTime? DisputeDeadline { get; set; } public string? DisputeReason { get; set; } public List<EscrowReleaseDto>? Releases { get; set; } }
+public class EscrowReleaseDto { public int Id { get; set; } public int MilestoneId { get; set; } public decimal Amount { get; set; } public DateTime ReleasedAt { get; set; } public string Status { get; set; } = string.Empty; }
+public class WithdrawalDto { public int Id { get; set; } public decimal Amount { get; set; } public string Status { get; set; } = string.Empty; public DateTime CreatedAt { get; set; } public DateTime? ProcessedAt { get; set; } public string? FailureReason { get; set; } }
