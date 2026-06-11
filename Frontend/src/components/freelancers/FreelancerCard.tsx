@@ -8,11 +8,15 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useShortlistedFreelancers } from "@/hooks/useSavedItems";
 import { cn } from "@/lib/utils";
+import { useEffect } from "react";
 
 export function FreelancerCard({ freelancer, index = 0 }: { freelancer: Freelancer; index?: number }) {
   const { has, toggle } = useShortlistedFreelancers();
   const saved = has(freelancer.id);
 
+  useEffect(()=>{
+    console.log(freelancer.avatar);
+  },[freelancer])
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}

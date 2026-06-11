@@ -5,7 +5,7 @@ import { ApiResponse, PagedResult, QueryParams } from '../types/api.types';
 export interface Freelancer {
   id: number;
   name: string;
-  avatar: string;
+  avatar?: string;
   title: string;
   location: string;
   hourlyRate: number;

@@ -1,5 +1,6 @@
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using Azure.Storage.Sas;
 using FreelancingApi.Services.Interfaces;
 using Minio.DataModel.Args;
 using SixLabors.ImageSharp;
@@ -97,7 +98,7 @@ public class FileUploadService : IFileUploadService
         });
 
         // Return URL (using Azure Blob Storage URL format)
-        return blobClient.Uri.ToString();
+        return GenerateSasUrl(blobClient);
     }
 
     public async Task<bool> DeleteFileAsync(string fileUrl)
@@ -119,6 +120,23 @@ public class FileUploadService : IFileUploadService
         }
     }
 
+
+    private string GenerateSasUrl(BlobClient blobClient)
+    {
+        // For Azurite / development: use StorageSharedKeyCredential
+        var sasBuilder = new BlobSasBuilder
+        {
+            BlobContainerName = blobClient.BlobContainerName,
+            BlobName = blobClient.Name,
+            Resource = "b", // "b" = blob
+            ExpiresOn = DateTimeOffset.UtcNow.AddHours(24)
+        };
+
+        sasBuilder.SetPermissions(BlobSasPermissions.Read);
+
+        // Generate the SAS URI
+        return blobClient.GenerateSasUri(sasBuilder).ToString();
+    }
     public async Task<string> UploadProfileImageAsync(IFormFile file, int userId)
     {
         return await UploadFileAsync(file, "profiles", userId);

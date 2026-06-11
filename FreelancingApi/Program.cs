@@ -21,6 +21,7 @@ using Hangfire.Storage.SQLite;
 using AspNetCoreRateLimit;
 using Stripe;
 using System.Text.Json;
+using Azure.Storage.Blobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -137,7 +138,7 @@ builder.Services.AddSwaggerGen(c =>
     });
     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-        if (System.IO.File.Exists(xmlPath))
+    if (System.IO.File.Exists(xmlPath))
     {
         c.IncludeXmlComments(xmlPath);
     }
@@ -186,7 +187,7 @@ StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 // Add Stripe services
 // builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
-builder.Services.AddSingleton<StripeClient>(provider => 
+builder.Services.AddSingleton<StripeClient>(provider =>
     new StripeClient(builder.Configuration["Stripe:SecretKey"]));
 
 builder.Services.AddMemoryCache();
@@ -205,6 +206,17 @@ builder.Services.AddScoped<IReviewService, FreelancingApi.Services.Implementaion
 builder.Services.AddSingleton<ICacheService, CacheService>();
 builder.Services.AddScoped<IFileUploadService, FileUploadService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
+builder.Services.AddSingleton(sp =>
+{
+    var connectionString = builder.Configuration
+        .GetConnectionString("AzureBlobStorage");
+    // or wherever your config lives
+
+    // This ensures the client has signing capability for SAS
+    return new BlobServiceClient(connectionString);
+});
+
+
 
 builder.Services.AddSignalR(options =>
 {
@@ -226,8 +238,11 @@ builder.Services.AddHangfireServer(options =>
 
 
 // AutoMapper
-builder.Services.AddAutoMapper(cfg => {
+builder.Services.AddAutoMapper(cfg =>
+{
     cfg.AddMaps(typeof(Program));
+    cfg.AllowNullCollections = true;
+    cfg.AllowNullDestinationValues = true;
 });
 
 builder.Services.AddStackExchangeRedisCache(options =>
@@ -279,7 +294,7 @@ app.MapControllers();
 app.UseIpRateLimiting();
 
 
-app.UseHangfireDashboard("/hangfire", new DashboardOptions{});
+app.UseHangfireDashboard("/hangfire", new DashboardOptions { });
 
 app.MapHub<NotificationHub>("/hubs/notification");
 

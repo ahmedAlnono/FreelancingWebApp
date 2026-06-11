@@ -12,13 +12,15 @@ namespace FreelancingApi.Controllers;
 [Authorize]
 public class UploadController(
     IFileUploadService fileUploadService,
-    IUnitOfWork unitOfWork
+    IUnitOfWork unitOfWork,
+    ILogger<UploadController> logger
     ) : ControllerBase
 {
     [HttpPost("profile-image")]
     public async Task<ActionResult<ApiResponse<string>>> UploadProfileImage(IFormFile file)
     {
         var userId = GetUserId();
+        logger.LogWarning("user id is {}", userId);
 
         if (file == null || file.Length == 0)
             return BadRequest(ApiResponse<string>.Fail("No file provided"));
@@ -34,7 +36,6 @@ public class UploadController(
         if (user != null)
         {
             user.Avatar = imageUrl;
-            await unitOfWork.Users.UpdateAsync(user);
             await unitOfWork.CompleteAsync();
         }
 
@@ -64,8 +65,8 @@ public class UploadController(
 
     private int GetUserId()
     {
-        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value
-                          ?? User.FindFirst("sub")?.Value;
+        var userIdClaim = User.FindFirst("sub")?.Value
+                          ?? User.Claims.ToList()[0].Value;
 
         return int.Parse(userIdClaim ?? "0");
     }

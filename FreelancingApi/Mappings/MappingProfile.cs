@@ -59,7 +59,7 @@ namespace FreelancingApi.Mappings
                 .ForMember(dest => dest.IsTopRated,
                     opt => opt.MapFrom(src => src.IsTopRated))
                 .ForMember(dest => dest.Avatar,
-                opt => opt.MapFrom(src => src.Avatar));
+                opt => opt.MapFrom(src => src.Avatar ?? ""));
 
             CreateMap<User, FreelancerDetailDto>()
                 .IncludeBase<User, FreelancerDto>()
@@ -111,16 +111,9 @@ namespace FreelancingApi.Mappings
 
             CreateMap<CreateReviewDto, Review>();
 
-            // Portfolio mappings
-            CreateMap<Portfolio, PortfolioDto>()
-                .ForMember(dest => dest.Tags,
-                    opt => opt.MapFrom(src => src.Tags.Select(t => t.Name)));
-
             // WorkHistory mappings
             CreateMap<WorkHistory, WorkHistoryDto>();
 
-            // Language mappings
-            CreateMap<Language, LanguageDto>();
         }
 
         private static string FormatTimeAgo(DateTime date)

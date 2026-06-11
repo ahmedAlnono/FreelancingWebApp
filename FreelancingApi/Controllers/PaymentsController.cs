@@ -106,8 +106,7 @@ public class PaymentsController : ControllerBase
 
     private int GetUserId()
     {
-        var claim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value
-                    ?? User.FindFirst("sub")?.Value;
+        var claim =  User.FindFirst("sub")?.Value;
         return int.Parse(claim ?? "0");
     }
 }

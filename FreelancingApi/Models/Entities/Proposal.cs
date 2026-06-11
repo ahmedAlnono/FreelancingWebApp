@@ -13,6 +13,7 @@ public class Proposal : BaseEntity
     public string Status { get; set; } = "pending"; // pending, approved, rejected, withdrawn, interview
     public DateTime SubmittedAt { get; set; } = DateTime.UtcNow;
     public DateTime? ReviewedAt { get; set; }
+    public decimal BidAmount { get; set; }
 
     // For milestone-based projects
     public virtual ICollection<Milestone> Milestones { get; set; } = [];

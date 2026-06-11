@@ -1,5 +1,4 @@
 using FreelancingApi.Models.Dtos;
-using FreelancingApi.Models.Entities;
 using FreelancingApi.Repositories.Interfaces;
 
 namespace FreelancingApi.Services.Interfaces;

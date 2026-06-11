@@ -37,8 +37,6 @@ public class FreelancerDetailDto : FreelancerDto
     public string Bio { get; set; } = string.Empty;
     public string CoverImage { get; set; } = string.Empty;
     public decimal TotalEarnings { get; set; }
-    public List<LanguageDto> Languages { get; set; } = [];
-    public List<PortfolioDto> Portfolio { get; set; } = [];
     public List<ReviewDto> Reviews { get; set; } = [];
     public List<WorkHistoryDto> WorkHistory { get; set; } = [];
 }
@@ -47,15 +45,6 @@ public class LanguageDto
 {
     public string Name { get; set; } = string.Empty;
     public string Level { get; set; } = string.Empty;
-}
-
-public class PortfolioDto
-{
-    public int Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public string ImageUrl { get; set; } = string.Empty;
-    public List<string> Tags { get; set; } = [];
 }
 
 public class WorkHistoryDto

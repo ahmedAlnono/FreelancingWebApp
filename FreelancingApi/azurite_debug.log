@@ -118,3 +118,211 @@
 2026-06-10T13:00:24.025Z 	 info: Azurite Table service successfully closed
 2026-06-10T13:00:24.027Z 	 info: Azurite Blob service successfully closed
 2026-06-10T13:00:24.027Z 	 info: Azurite Queue service successfully closed
+2026-06-11T12:44:05.755Z 	 info: Azurite Blob service is starting on 127.0.0.1:10000
+2026-06-11T12:44:05.758Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:44:05.758Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:44:05.769Z 	 info: BlobGCManager:start() Starting BlobGCManager. Set status to Initializing.
+2026-06-11T12:44:05.770Z 	 info: BlobGCManager:start() Trigger mark and sweep loop. Set status to Running.
+2026-06-11T12:44:05.770Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
+2026-06-11T12:44:05.770Z 	 info: BlobGCManager:markSweep() Get all extents.
+2026-06-11T12:44:05.771Z 	 info: BlobGCManager:start() BlobGCManager successfully started.
+2026-06-11T12:44:05.773Z 	 info: BlobGCManager:markSweep() Got 1 extents.
+2026-06-11T12:44:05.773Z 	 info: BlobGCManager:markSweep() Get referred extents.
+2026-06-11T12:44:05.774Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:44:05.774Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 4ms.
+2026-06-11T12:44:05.774Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
+2026-06-11T12:44:05.778Z 	 info: Azurite Blob service successfully listens on http://127.0.0.1:10000
+2026-06-11T12:44:05.779Z 	 info: Azurite Queue service is starting on 127.0.0.1:10001
+2026-06-11T12:44:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:44:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:44:05.787Z 	 info: QueueGCManager:start() Starting QueueGCManager, set status to Initializing
+2026-06-11T12:44:05.787Z 	 info: QueueGCManager:start() Trigger mark and sweep loop, set status to Running.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:start() QueueGCManager successfully started.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:44:05.789Z 	 info: Azurite Queue service successfully listens on http://127.0.0.1:10001
+2026-06-11T12:44:05.790Z 	 info: Azurite Table service is starting on 127.0.0.1:10002
+2026-06-11T12:44:05.790Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:44:05.790Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:44:05.792Z 	 info: Azurite Table service successfully listens on http://127.0.0.1:10002
+2026-06-11T12:44:05.792Z 	 info: InstaceID 507daafd-6e0e-4f82-90a4-877edb15f261, SessionID 44100bc9-b41d-435c-9b8f-4d3313317b92.
+2026-06-11T12:44:05.810Z 	 info: Telemetry initialize successfully.
+2026-06-11T12:44:05.814Z 	 verbose: Send start telemetry
+2026-06-11T12:44:07.689Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","sec-fetch-site":"cross-site","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-11T12:44:07.690Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
+2026-06-11T12:44:07.691Z 76ec0857-209f-4846-9597-f91e64c4f35b verbose: DispatchMiddleware: Dispatching request...
+2026-06-11T12:44:07.697Z 76ec0857-209f-4846-9597-f91e64c4f35b info: DispatchMiddleware: Operation=Blob_Download
+2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
+2026-06-11T12:44:07.703Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-11T12:44:07.704Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-11T12:44:07.704Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-11T12:44:07.705Z 76ec0857-209f-4846-9597-f91e64c4f35b info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
+2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: undefined
+2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
+2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: undefined
+2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() No signature found in request. Skip blob service SAS validation.
+2026-06-11T12:44:07.720Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.  ErrorHTTPStatusCode=403 ErrorHTTPStatusMessage=Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature. ErrorHTTPHeaders={"x-ms-error-code":"AuthorizationFailure","x-ms-request-id":"76ec0857-209f-4846-9597-f91e64c4f35b"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>AuthorizationFailure</Code>\n  <Message>Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.\nRequestId:76ec0857-209f-4846-9597-f91e64c4f35b\nTime:2026-06-11T12:44:07.709Z</Message>\n</Error>" ErrorStack="StorageError: Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.\n    at StorageErrorFactory.getAuthorizationFailure (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:144:16)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/AuthenticationMiddlewareFactory.js:25:56\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP code: 403
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP status message: Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=AuthorizationFailure
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=76ec0857-209f-4846-9597-f91e64c4f35b
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set content type: application/xml
+2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>AuthorizationFailure</Code>\n  <Message>Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.\nRequestId:76ec0857-209f-4846-9597-f91e64c4f35b\nTime:2026-06-11T12:44:07.709Z</Message>\n</Error>"
+2026-06-11T12:44:07.724Z 76ec0857-209f-4846-9597-f91e64c4f35b verbose: Send Blob telemetry: B_Blob_Download
+2026-06-11T12:44:07.725Z 76ec0857-209f-4846-9597-f91e64c4f35b info: EndMiddleware: End response. TotalTimeInMS=37 StatusCode=403 StatusMessage=Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"AuthorizationFailure","x-ms-request-id":"76ec0857-209f-4846-9597-f91e64c4f35b","content-type":"application/xml"}
+2026-06-11T12:44:07.777Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/favicon.ico RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:10000/devstoreaccount1/freelancing-files/profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-11T12:44:07.777Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd info: BlobStorageContextMiddleware: Account=favicon.ico Container=undefined Blob=
+2026-06-11T12:44:07.777Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd verbose: DispatchMiddleware: Dispatching request...
+2026-06-11T12:44:07.778Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: DispatchMiddleware: Incoming URL doesn't match any of swagger defined request patterns.
+2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: ErrorName=UnsupportedRequestError ErrorMessage=Incoming URL doesn't match any of swagger defined request patterns.  ErrorHTTPStatusCode=400 ErrorHTTPStatusMessage=undefined ErrorHTTPHeaders=undefined ErrorHTTPBody=undefined ErrorStack="UnsupportedRequestError: Incoming URL doesn't match any of swagger defined request patterns.\n    at dispatchMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/dispatch.middleware.js:41:30)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:50:47\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)\n    at blobStorageContextMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:137:5)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:15:16\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)"
+2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: Set HTTP code: 400
+2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: Set HTTP body: undefined
+2026-06-11T12:44:07.780Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd verbose: Send Blob telemetry: B_Service_SetProperties
+2026-06-11T12:44:07.780Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd info: EndMiddleware: End response. TotalTimeInMS=4 StatusCode=400 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0"}
+2026-06-11T12:45:05.765Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:45:05.765Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:45:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:45:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:45:05.790Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:45:05.790Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:45:05.790Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:45:05.792Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:45:05.792Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:46:05.770Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:46:05.770Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:46:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:46:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:46:05.791Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:46:05.791Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:46:05.792Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:46:05.793Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:46:05.793Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:47:05.774Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:47:05.774Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:47:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:47:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:47:05.793Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:47:05.794Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:47:05.795Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:47:05.796Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:47:05.796Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:48:05.778Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:48:05.778Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:48:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:48:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:48:05.795Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:48:05.795Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:48:05.796Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:48:05.796Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:48:05.796Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:49:05.783Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:49:05.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:49:05.784Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:49:05.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:49:05.796Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:49:05.796Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-11T12:49:05.797Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:49:05.797Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:49:05.797Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:50:05.797Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:50:05.797Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:50:05.798Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:50:05.798Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:50:05.799Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:51:05.798Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:51:05.798Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:51:05.798Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:51:05.799Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:51:05.799Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:52:05.799Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:52:05.799Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:52:05.799Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:52:05.799Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:52:05.800Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:52:05.800Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:52:05.800Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:52:05.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:52:05.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:53:05.801Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-11T12:53:05.801Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-11T12:53:05.801Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-11T12:53:05.801Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-11T12:53:05.801Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-11T12:53:05.802Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-11T12:53:05.802Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-11T12:53:05.802Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-11T12:53:05.802Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-11T12:53:10.259Z 	 verbose: Send stop telemetry
+2026-06-11T12:53:10.260Z 	 info: Azurite Blob service is closing...
+2026-06-11T12:53:10.260Z 	 info: Azurite Queue service is closing...
+2026-06-11T12:53:10.260Z 	 info: Azurite Table service is closing...
+2026-06-11T12:53:10.261Z 	 info: BlobGCManager:close() Start closing BlobGCManager. Set status to Closing.
+2026-06-11T12:53:10.261Z 	 info: QueueGCManager:close() Start closing QueueGCManager, set status to Closing.
+2026-06-11T12:53:10.262Z 	 info: BlobGCManager:start() Mark and sweep loop is closed.
+2026-06-11T12:53:10.262Z 	 info: BlobGCManager:close() BlobGCManager successfully closed. Set status to Closed.
+2026-06-11T12:53:10.262Z 	 info: QueueGCManager:start() Mark and sweep loop is closed.
+2026-06-11T12:53:10.262Z 	 info: QueueGCManager:close() QueueGCManager successfully closed, set status to Closed.
+2026-06-11T12:53:10.262Z 	 info: Azurite Table service successfully closed
+2026-06-11T12:53:10.263Z 	 info: Azurite Blob service successfully closed
+2026-06-11T12:53:10.263Z 	 info: Azurite Queue service successfully closed

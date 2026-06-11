@@ -1,7 +1,6 @@
 using FreelancingApi.Models.Dtos;
 using FreelancingApi.Repositories.Interfaces;
 using FreelancingApi.Services.Interfaces;
-using FreelancingApi.Services.Implementaions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;

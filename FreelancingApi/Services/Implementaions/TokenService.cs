@@ -15,10 +15,10 @@ public class TokenService(IConfiguration configuration) : ITokenService
     {
         var claims = new List<Claim>
         {
-            new("Sub", user.Id.ToString()),
-            new("Email", user.Email),
-            new("UniqueName", user.Username),
-            new("Jti", Guid.NewGuid().ToString()),
+            new("sub", user.Id.ToString()),
+            new("email", user.Email),
+            new("name", user.Username),
+            new("jti", Guid.NewGuid().ToString()),
             new(ClaimTypes.Role, user.UserType ?? "Freelancer"),
             new("role", user.UserType ?? "Freelancer")
         };
