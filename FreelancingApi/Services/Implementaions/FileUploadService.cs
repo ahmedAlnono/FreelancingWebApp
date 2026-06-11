@@ -1,34 +1,40 @@
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
 using FreelancingApi.Services.Interfaces;
-using Minio;
 using Minio.DataModel.Args;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
 namespace FreelancingApi.Services.Implementaions;
 
-public class FileUploadService(IMinioClient minioClient, IConfiguration configuration) : IFileUploadService
+public class FileUploadService : IFileUploadService
 {
-    private readonly string _bucketName = configuration["MinIO:BucketName"] ?? "freelancing-files";
-    private bool _bucketChecked = false;
+    private readonly BlobContainerClient _containerClient;
+    private readonly IConfiguration _configuration;
+    private readonly string _containerName;
+    private bool _containerChecked = false;
+    public FileUploadService(IConfiguration configuration)
+    {
+        _configuration = configuration;
+        _containerName = configuration["AzureStorage:ContainerName"] ?? "freelancing-files";
+
+        var connectionString = configuration["AzureStorage:ConnectionString"];
+        var blobServiceClient = new BlobServiceClient(connectionString);
+        _containerClient = blobServiceClient.GetBlobContainerClient(_containerName);
+    }
 
     private async Task EnsureBucketExists()
     {
-        if (_bucketChecked) return;
+        if (_containerChecked) return;
 
-        var found = await minioClient.BucketExistsAsync(new BucketExistsArgs()
-            .WithBucket(_bucketName));
-
-        if (!found)
-        {
-            await minioClient.MakeBucketAsync(new MakeBucketArgs()
-                .WithBucket(_bucketName));
-        }
-        _bucketChecked = true;
+        await _containerClient.CreateIfNotExistsAsync();
+        _containerChecked = true;
     }
 
     public async Task<string> UploadFileAsync(IFormFile file, string folder, int userId)
     {
         await EnsureBucketExists();
+
         // Validate file
         if (file == null || file.Length == 0)
             throw new ArgumentException("No file provided");
@@ -41,6 +47,8 @@ public class FileUploadService(IMinioClient minioClient, IConfiguration configur
 
         // Process image if it's an image file
         byte[] fileBytes;
+        string contentType = file.ContentType;
+
         if (extension is ".jpg" or ".jpeg" or ".png" or ".gif")
         {
             using var memoryStream = new MemoryStream();
@@ -60,8 +68,11 @@ public class FileUploadService(IMinioClient minioClient, IConfiguration configur
             }
 
             using var outputStream = new MemoryStream();
+
+            // Save as PNG for consistency
             await image.SaveAsync(outputStream, new SixLabors.ImageSharp.Formats.Png.PngEncoder());
             fileBytes = outputStream.ToArray();
+            contentType = "image/png";
         }
         else
         {
@@ -71,34 +82,36 @@ public class FileUploadService(IMinioClient minioClient, IConfiguration configur
         }
 
         // Generate unique filename
-        var fileName = $"{folder}/{DateTime.UtcNow:yyyy/MM/dd}/{userId}_{Guid.NewGuid()}{extension}";
+        var blobName = $"{folder}/{DateTime.UtcNow:yyyy/MM/dd}/{userId}_{Guid.NewGuid()}{extension}";
 
-        // Upload to MinIO/S3
+        // Upload to Azure Blob Storage
+        var blobClient = _containerClient.GetBlobClient(blobName);
+
         using var fileStream = new MemoryStream(fileBytes);
-        await minioClient.PutObjectAsync(new PutObjectArgs()
-            .WithBucket(_bucketName)
-            .WithObject(fileName)
-            .WithStreamData(fileStream)
-            .WithObjectSize(fileStream.Length)
-            .WithContentType(file.ContentType));
+        await blobClient.UploadAsync(fileStream, new BlobUploadOptions
+        {
+            HttpHeaders = new BlobHttpHeaders
+            {
+                ContentType = contentType
+            }
+        });
 
-        // Return URL
-        return $"{configuration["MinIO:Endpoint"]}/{_bucketName}/{fileName}";
+        // Return URL (using Azure Blob Storage URL format)
+        return blobClient.Uri.ToString();
     }
 
     public async Task<bool> DeleteFileAsync(string fileUrl)
     {
         try
         {
-            // Extract object name from URL
+            // Extract blob name from URL
             var uri = new Uri(fileUrl);
-            var objectName = uri.AbsolutePath.TrimStart('/').Replace($"{_bucketName}/", "");
+            var blobName = string.Join("", uri.AbsolutePath.Split('/').Skip(2)); // Remove container name from path
 
-            await minioClient.RemoveObjectAsync(new RemoveObjectArgs()
-                .WithBucket(_bucketName)
-                .WithObject(objectName));
+            var blobClient = _containerClient.GetBlobClient(blobName);
+            var response = await blobClient.DeleteIfExistsAsync();
 
-            return true;
+            return response.Value;
         }
         catch
         {

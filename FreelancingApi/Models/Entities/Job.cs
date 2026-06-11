@@ -28,6 +28,8 @@ public class Job : BaseEntity
     public bool NdaRequired { get; set; }
     public string Status { get; set; } = "open"; // open, in-progress, completed, cancelled
     public string? AttachmentUrl { get; set; }
+    public FreelancerProfile? Freelancer {get;set;}
+    public int FreeLancerId {get;set;}
     
     // Navigation properties
     [JsonIgnore]

@@ -5,6 +5,8 @@ using FreelancingApi.Services.Implementaions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using AutoMapper;
+using FreelancingApi.Models.Entities;
 
 namespace FreelancingApi.Controllers;
 
@@ -12,7 +14,9 @@ namespace FreelancingApi.Controllers;
 [Route("api/[controller]")]
 [Authorize]
 public class JobsController(
-    IJobService jobService) : ControllerBase
+    IJobService jobService,
+    IUnitOfWork unitOfWork,
+    IMapper mapper) : ControllerBase
 {
 
     /// <summary>
@@ -115,7 +119,40 @@ public class JobsController(
         var count = await jobService.GetJobsCountAsync();
         return Ok(ApiResponse<int>.Ok(count));
     }
+
+    [HttpPost("proposal")]
+    [Authorize(Roles = "Freelancer")]
+    public async Task<ActionResult<ApiResponse<bool>>> CreateProposal(CreateProposalDto dto)
+    {
+        var user = await unitOfWork.Users.GetByIdAsync(GetUserId());
+        if(user is null)
+            return BadRequest(ApiResponse<bool>.Fail("User not found"));
+
+        if(user.Bids < 1)
+            return BadRequest(ApiResponse<bool>.Fail("user don't have bids"));
+        
+
+        var proposal = unitOfWork.Proposals.AddAsync(mapper.Map<Proposal>(dto));
+        if(proposal is  null)
+        {
+            return BadRequest(ApiResponse<bool>.Fail("Proposal not created"));
+        }
+        --user.Bids;
+        await unitOfWork.CompleteAsync();
+        return Ok(ApiResponse<bool>.Ok(true));
+    }
     
+    [Authorize(Roles = "Client")]
+    [HttpPost("accept-proposal")]
+    public async Task<ActionResult<ApiResponse<bool>>> AcceptProposal(AcceptProposalDto dto)
+    {
+        var result = await jobService.AcceptProposal(GetUserId(), dto);
+        if(!result)
+            return BadRequest(ApiResponse<bool>.Fail("proposal not accepted"));
+        
+        return Ok(ApiResponse<bool>.Ok(result));
+    }
+
     private int GetUserId()
     {
         var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value 

@@ -1,4 +1,3 @@
-// Repositories/UnitOfWork.cs
 using FreelancingApi.Data;
 using FreelancingApi.Models.Entities;
 using FreelancingApi.Repositories.Interfaces;
@@ -16,7 +15,6 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     private IGenericRepository<Message>? _messages;
     private IGenericRepository<Review>? _reviews;
     private IGenericRepository<Skill>? _skills;
-    private IGenericRepository<Portfolio>? _protfolios;
     
     public IGenericRepository<User> Users => 
         _users ??= new GenericRepository<User>(context);
@@ -38,10 +36,6 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     
     public IGenericRepository<Skill> Skills => 
         _skills ??= new GenericRepository<Skill>(context);
-
-    public IGenericRepository<Portfolio> Portfolios =>
-        _protfolios ??= new GenericRepository<Portfolio>(context);
-    
     public async Task<int> CompleteAsync()
     {
         return await context.SaveChangesAsync();

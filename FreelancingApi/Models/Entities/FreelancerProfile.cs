@@ -20,7 +20,6 @@ public class FreelancerProfile : BaseEntity
     
     // Navigation properties
     public virtual ICollection<UserSkill> Skills { get; set; } = [];
-    public virtual ICollection<Language> Languages { get; set; } = [];
-    public virtual ICollection<Portfolio> Portfolios { get; set; } = [];
     public virtual ICollection<WorkHistory> WorkHistory { get; set; } = [];
+    public virtual ICollection<Job> Jobs {get;set;} = [];
 }

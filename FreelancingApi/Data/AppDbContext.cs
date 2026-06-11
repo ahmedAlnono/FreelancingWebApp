@@ -15,8 +15,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<Review> Reviews { get; set; } = null!;
     public DbSet<Skill> Skills { get; set; } = null!;
     public DbSet<UserSkill> UserSkills { get; set; } = null!;
-    public DbSet<Language> Languages { get; set; } = null!;
-    public DbSet<Portfolio> Portfolios { get; set; } = null!;
     public DbSet<WorkHistory> WorkHistory { get; set; } = null!;
     public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
     public DbSet<Milestone> Milestones { get; set; } = null!;

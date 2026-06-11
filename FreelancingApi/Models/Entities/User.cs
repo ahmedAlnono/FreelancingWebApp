@@ -29,6 +29,7 @@ public class User : BaseEntity
     public decimal Rating { get; set; } = 0;
     public int Reviews { get; set; } = 0;
     public decimal HireRate { get; set; }
+    public int Bids {get;set;}
 
     // Navigation properties
     public virtual FreelancerProfile? FreelancerProfile { get; set; }

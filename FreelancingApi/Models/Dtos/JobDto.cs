@@ -49,3 +49,8 @@ public class UpdateJobDto
     public decimal? BudgetFixed { get; set; }
     public DateTime? Deadline { get; set; }
 }
+public class AcceptProposalDto
+{
+    public int JobId { get; set; }
+    public int FreelancerId { get; set; }
+}

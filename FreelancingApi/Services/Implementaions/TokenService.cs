@@ -15,13 +15,12 @@ public class TokenService(IConfiguration configuration) : ITokenService
     {
         var claims = new List<Claim>
         {
-            new(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new(JwtRegisteredClaimNames.Email, user.Email),
-            new(JwtRegisteredClaimNames.UniqueName, user.Username),
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new(ClaimTypes.Email, user.Email),
-            new(ClaimTypes.Role, user.UserType ?? "Freelancer")
+            new("Sub", user.Id.ToString()),
+            new("Email", user.Email),
+            new("UniqueName", user.Username),
+            new("Jti", Guid.NewGuid().ToString()),
+            new(ClaimTypes.Role, user.UserType ?? "Freelancer"),
+            new("role", user.UserType ?? "Freelancer")
         };
 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"]!));

@@ -12,4 +12,5 @@ public interface IJobService
     Task<JobDto> UpdateJobAsync(int jobId, int clientId ,UpdateJobDto dto);
     Task<bool> DeleteJobAsync(int jobId,int clientId);
     Task<int> GetJobsCountAsync();
+    Task<bool> AcceptProposal(int clientId, AcceptProposalDto dto);
 }

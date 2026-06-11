@@ -11,7 +11,6 @@ public interface IUnitOfWork : IDisposable
     IGenericRepository<Message> Messages { get; }
     IGenericRepository<Review> Reviews { get; }
     IGenericRepository<Skill> Skills { get; }
-    IGenericRepository<Portfolio> Portfolios { get; }
 
     Task<int> CompleteAsync();
     Task BeginTransactionAsync();

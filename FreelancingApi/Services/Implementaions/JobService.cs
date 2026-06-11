@@ -3,7 +3,6 @@ using FreelancingApi.Models.Dtos;
 using FreelancingApi.Models.Entities;
 using FreelancingApi.Repositories.Interfaces;
 using FreelancingApi.Services.Interfaces;
-using Microsoft.Extensions.Logging;
 
 namespace FreelancingApi.Services.Implementaions;
 
@@ -85,10 +84,8 @@ public class JobService(
 
     public async Task<JobDto> UpdateJobAsync(int jobId, int clientId, UpdateJobDto updateDto)
     {
-        var job = await unitOfWork.Jobs.GetByIdAsync(jobId);
-
-        if (job == null)
-            throw new KeyNotFoundException($"Job {jobId} not found");
+        var job = await unitOfWork.Jobs.GetByIdAsync(jobId) 
+        ?? throw new KeyNotFoundException($"Job {jobId} not found");
 
         if (job.ClientId != clientId)
             throw new UnauthorizedAccessException("You can only update your own jobs");
@@ -121,5 +118,27 @@ public class JobService(
     public async Task<int> GetJobsCountAsync()
     {
         return await unitOfWork.Jobs.CountAsync();
+    }
+
+    public async Task<bool> AcceptProposal(int clientId, AcceptProposalDto dto)
+    {
+        var client = await unitOfWork.Users.GetByIdAsync(clientId)
+        ?? throw new Exception("client not found");
+
+        if(client.Role == "freelancer")
+            throw new Exception("you are not authorize to accept job proposal");
+        
+        var freelancer = await unitOfWork.Users.GetAsync(
+            u=> u.Id == dto.FreelancerId&&u.Role == "freelancer"
+        ) ?? throw new Exception("freelancer not found");
+
+        var job = await unitOfWork.Jobs.GetByIdAsync(dto.JobId)
+        ?? throw new Exception("job not found");
+
+        job.FreeLancerId = dto.FreelancerId;
+        job.Status = "in-progress";
+        await unitOfWork.CompleteAsync();
+
+        return true;
     }
 }
