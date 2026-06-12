@@ -102,7 +102,11 @@ export function Navbar() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-56">
                   <DropdownMenuLabel>
-                    <div className="font-medium">{user.username}</div>
+                    <div className="font-medium">
+                      {user.firstName && user.lastName 
+                        ? `${user.firstName} ${user.lastName}` 
+                        : user.username}
+                    </div>
                     <div className="text-xs text-muted-foreground capitalize">{user.role}</div>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />

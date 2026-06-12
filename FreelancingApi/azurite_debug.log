@@ -1,328 +1,644 @@
-2026-06-10T12:55:33.522Z 	 info: Azurite Blob service is starting on 127.0.0.1:10000
-2026-06-10T12:55:33.523Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:55:33.523Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:55:33.534Z 	 info: BlobGCManager:start() Starting BlobGCManager. Set status to Initializing.
-2026-06-10T12:55:33.534Z 	 info: BlobGCManager:start() Trigger mark and sweep loop. Set status to Running.
-2026-06-10T12:55:33.535Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
-2026-06-10T12:55:33.535Z 	 info: BlobGCManager:markSweep() Get all extents.
-2026-06-10T12:55:33.537Z 	 info: BlobGCManager:start() BlobGCManager successfully started.
-2026-06-10T12:55:33.539Z 	 info: BlobGCManager:markSweep() Got 1 extents.
-2026-06-10T12:55:33.539Z 	 info: BlobGCManager:markSweep() Get referred extents.
-2026-06-10T12:55:33.540Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-10T12:55:33.540Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 5ms.
-2026-06-10T12:55:33.540Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
-2026-06-10T12:55:33.544Z 	 info: Azurite Blob service successfully listens on http://127.0.0.1:10000
-2026-06-10T12:55:33.545Z 	 info: Azurite Queue service is starting on 127.0.0.1:10001
-2026-06-10T12:55:33.545Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:55:33.545Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:55:33.554Z 	 info: QueueGCManager:start() Starting QueueGCManager, set status to Initializing
-2026-06-10T12:55:33.554Z 	 info: QueueGCManager:start() Trigger mark and sweep loop, set status to Running.
-2026-06-10T12:55:33.554Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-10T12:55:33.554Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-10T12:55:33.554Z 	 info: QueueGCManager:start() QueueGCManager successfully started.
-2026-06-10T12:55:33.554Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-10T12:55:33.554Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-10T12:55:33.555Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-10T12:55:33.555Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-10T12:55:33.555Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-10T12:55:33.556Z 	 info: Azurite Queue service successfully listens on http://127.0.0.1:10001
-2026-06-10T12:55:33.556Z 	 info: Azurite Table service is starting on 127.0.0.1:10002
-2026-06-10T12:55:33.556Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:55:33.556Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:55:33.559Z 	 info: Azurite Table service successfully listens on http://127.0.0.1:10002
-2026-06-10T12:55:33.560Z 	 info: InstaceID 507daafd-6e0e-4f82-90a4-877edb15f261, SessionID f1a3decd-9a0e-4d24-88f9-05e9c0deb26e.
-2026-06-10T12:55:33.578Z 	 info: Telemetry initialize successfully.
-2026-06-10T12:55:33.582Z 	 verbose: Send start telemetry
-2026-06-10T12:55:41.409Z 800c8e76-f15a-483f-aa5c-a19c7392050c info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/favicon.ico RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:10000/devstoreaccount1/freelancing-files/profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
-2026-06-10T12:55:41.410Z 800c8e76-f15a-483f-aa5c-a19c7392050c info: BlobStorageContextMiddleware: Account=favicon.ico Container=undefined Blob=
-2026-06-10T12:55:41.411Z 800c8e76-f15a-483f-aa5c-a19c7392050c verbose: DispatchMiddleware: Dispatching request...
-2026-06-10T12:55:41.416Z 800c8e76-f15a-483f-aa5c-a19c7392050c error: DispatchMiddleware: Incoming URL doesn't match any of swagger defined request patterns.
-2026-06-10T12:55:41.417Z 800c8e76-f15a-483f-aa5c-a19c7392050c error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
-2026-06-10T12:55:41.417Z 800c8e76-f15a-483f-aa5c-a19c7392050c error: ErrorMiddleware: ErrorName=UnsupportedRequestError ErrorMessage=Incoming URL doesn't match any of swagger defined request patterns.  ErrorHTTPStatusCode=400 ErrorHTTPStatusMessage=undefined ErrorHTTPHeaders=undefined ErrorHTTPBody=undefined ErrorStack="UnsupportedRequestError: Incoming URL doesn't match any of swagger defined request patterns.\n    at dispatchMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/dispatch.middleware.js:41:30)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:50:47\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)\n    at blobStorageContextMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:137:5)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:15:16\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)"
-2026-06-10T12:55:41.417Z 800c8e76-f15a-483f-aa5c-a19c7392050c error: ErrorMiddleware: Set HTTP code: 400
-2026-06-10T12:55:41.418Z 800c8e76-f15a-483f-aa5c-a19c7392050c error: ErrorMiddleware: Set HTTP body: undefined
-2026-06-10T12:55:41.419Z 800c8e76-f15a-483f-aa5c-a19c7392050c verbose: Send Blob telemetry: B_Service_SetProperties
-2026-06-10T12:55:41.420Z 800c8e76-f15a-483f-aa5c-a19c7392050c info: EndMiddleware: End response. TotalTimeInMS=11 StatusCode=400 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0"}
-2026-06-10T12:56:33.528Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:56:33.528Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:56:33.546Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:56:33.546Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:56:33.555Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-10T12:56:33.555Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-10T12:56:33.556Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-10T12:56:33.556Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-10T12:56:33.556Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-10T12:56:33.556Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-10T12:56:33.556Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-10T12:56:33.557Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:56:33.557Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:57:33.533Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:57:33.533Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:57:33.546Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:57:33.547Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:57:33.556Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-10T12:57:33.557Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-10T12:57:33.557Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-10T12:57:33.557Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-10T12:57:33.557Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-10T12:57:33.557Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
-2026-06-10T12:57:33.557Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-10T12:57:33.558Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:57:33.558Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:58:33.538Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:58:33.538Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:58:33.546Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:58:33.546Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:58:33.558Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-10T12:58:33.559Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-10T12:58:33.559Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-10T12:58:33.559Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-10T12:58:33.559Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-10T12:58:33.560Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-10T12:58:33.560Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-10T12:58:33.560Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:58:33.560Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:58:49.099Z c7fbbc55-cf85-42ae-9455-e0144282453d info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/favicon.ico RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:10000/devstoreaccount1/freelancing-files/profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
-2026-06-10T12:58:49.099Z c7fbbc55-cf85-42ae-9455-e0144282453d info: BlobStorageContextMiddleware: Account=favicon.ico Container=undefined Blob=
-2026-06-10T12:58:49.099Z c7fbbc55-cf85-42ae-9455-e0144282453d verbose: DispatchMiddleware: Dispatching request...
-2026-06-10T12:58:49.100Z c7fbbc55-cf85-42ae-9455-e0144282453d error: DispatchMiddleware: Incoming URL doesn't match any of swagger defined request patterns.
-2026-06-10T12:58:49.100Z c7fbbc55-cf85-42ae-9455-e0144282453d error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
-2026-06-10T12:58:49.100Z c7fbbc55-cf85-42ae-9455-e0144282453d error: ErrorMiddleware: ErrorName=UnsupportedRequestError ErrorMessage=Incoming URL doesn't match any of swagger defined request patterns.  ErrorHTTPStatusCode=400 ErrorHTTPStatusMessage=undefined ErrorHTTPHeaders=undefined ErrorHTTPBody=undefined ErrorStack="UnsupportedRequestError: Incoming URL doesn't match any of swagger defined request patterns.\n    at dispatchMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/dispatch.middleware.js:41:30)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:50:47\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)\n    at blobStorageContextMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:137:5)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:15:16\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)"
-2026-06-10T12:58:49.100Z c7fbbc55-cf85-42ae-9455-e0144282453d error: ErrorMiddleware: Set HTTP code: 400
-2026-06-10T12:58:49.100Z c7fbbc55-cf85-42ae-9455-e0144282453d error: ErrorMiddleware: Set HTTP body: undefined
-2026-06-10T12:58:49.101Z c7fbbc55-cf85-42ae-9455-e0144282453d verbose: Send Blob telemetry: B_Service_SetProperties
-2026-06-10T12:58:49.101Z c7fbbc55-cf85-42ae-9455-e0144282453d info: EndMiddleware: End response. TotalTimeInMS=2 StatusCode=400 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0"}
-2026-06-10T12:59:33.543Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:59:33.543Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:59:33.546Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:59:33.546Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T12:59:33.560Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-10T12:59:33.561Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-10T12:59:33.561Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-10T12:59:33.561Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-10T12:59:33.561Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-10T12:59:33.561Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-10T12:59:33.561Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-10T12:59:33.561Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-10T12:59:33.561Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-10T13:00:24.021Z 	 verbose: Send stop telemetry
-2026-06-10T13:00:24.022Z 	 info: Azurite Blob service is closing...
-2026-06-10T13:00:24.023Z 	 info: Azurite Queue service is closing...
-2026-06-10T13:00:24.023Z 	 info: Azurite Table service is closing...
-2026-06-10T13:00:24.024Z 	 info: BlobGCManager:close() Start closing BlobGCManager. Set status to Closing.
-2026-06-10T13:00:24.024Z 	 info: QueueGCManager:close() Start closing QueueGCManager, set status to Closing.
-2026-06-10T13:00:24.025Z 	 info: BlobGCManager:start() Mark and sweep loop is closed.
-2026-06-10T13:00:24.025Z 	 info: BlobGCManager:close() BlobGCManager successfully closed. Set status to Closed.
-2026-06-10T13:00:24.025Z 	 info: QueueGCManager:start() Mark and sweep loop is closed.
-2026-06-10T13:00:24.025Z 	 info: QueueGCManager:close() QueueGCManager successfully closed, set status to Closed.
-2026-06-10T13:00:24.025Z 	 info: Azurite Table service successfully closed
-2026-06-10T13:00:24.027Z 	 info: Azurite Blob service successfully closed
-2026-06-10T13:00:24.027Z 	 info: Azurite Queue service successfully closed
-2026-06-11T12:44:05.755Z 	 info: Azurite Blob service is starting on 127.0.0.1:10000
-2026-06-11T12:44:05.758Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:44:05.758Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:44:05.769Z 	 info: BlobGCManager:start() Starting BlobGCManager. Set status to Initializing.
-2026-06-11T12:44:05.770Z 	 info: BlobGCManager:start() Trigger mark and sweep loop. Set status to Running.
-2026-06-11T12:44:05.770Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
-2026-06-11T12:44:05.770Z 	 info: BlobGCManager:markSweep() Get all extents.
-2026-06-11T12:44:05.771Z 	 info: BlobGCManager:start() BlobGCManager successfully started.
-2026-06-11T12:44:05.773Z 	 info: BlobGCManager:markSweep() Got 1 extents.
-2026-06-11T12:44:05.773Z 	 info: BlobGCManager:markSweep() Get referred extents.
-2026-06-11T12:44:05.774Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:44:05.774Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 4ms.
-2026-06-11T12:44:05.774Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
-2026-06-11T12:44:05.778Z 	 info: Azurite Blob service successfully listens on http://127.0.0.1:10000
-2026-06-11T12:44:05.779Z 	 info: Azurite Queue service is starting on 127.0.0.1:10001
-2026-06-11T12:44:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:44:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:44:05.787Z 	 info: QueueGCManager:start() Starting QueueGCManager, set status to Initializing
-2026-06-11T12:44:05.787Z 	 info: QueueGCManager:start() Trigger mark and sweep loop, set status to Running.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:start() QueueGCManager successfully started.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
-2026-06-11T12:44:05.788Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:44:05.789Z 	 info: Azurite Queue service successfully listens on http://127.0.0.1:10001
-2026-06-11T12:44:05.790Z 	 info: Azurite Table service is starting on 127.0.0.1:10002
-2026-06-11T12:44:05.790Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:44:05.790Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:44:05.792Z 	 info: Azurite Table service successfully listens on http://127.0.0.1:10002
-2026-06-11T12:44:05.792Z 	 info: InstaceID 507daafd-6e0e-4f82-90a4-877edb15f261, SessionID 44100bc9-b41d-435c-9b8f-4d3313317b92.
-2026-06-11T12:44:05.810Z 	 info: Telemetry initialize successfully.
-2026-06-11T12:44:05.814Z 	 verbose: Send start telemetry
-2026-06-11T12:44:07.689Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","cache-control":"max-age=0","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","sec-fetch-site":"cross-site","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
-2026-06-11T12:44:07.690Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
-2026-06-11T12:44:07.691Z 76ec0857-209f-4846-9597-f91e64c4f35b verbose: DispatchMiddleware: Dispatching request...
-2026-06-11T12:44:07.697Z 76ec0857-209f-4846-9597-f91e64c4f35b info: DispatchMiddleware: Operation=Blob_Download
-2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
-2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b info: PublicAccessAuthenticator:validate() Start validation against public access.
-2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: PublicAccessAuthenticator:validate() Getting account properties...
-2026-06-11T12:44:07.700Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
-2026-06-11T12:44:07.703Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
-2026-06-11T12:44:07.704Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
-2026-06-11T12:44:07.704Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
-2026-06-11T12:44:07.705Z 76ec0857-209f-4846-9597-f91e64c4f35b info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
-2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Getting account properties...
-2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
-2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Got account properties successfully.
-2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: undefined
-2026-06-11T12:44:07.706Z 76ec0857-209f-4846-9597-f91e64c4f35b info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
-2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
-2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Getting account properties...
-2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png
-2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Got account properties successfully.
-2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: undefined
-2026-06-11T12:44:07.708Z 76ec0857-209f-4846-9597-f91e64c4f35b debug: BlobSASAuthenticator:validate() No signature found in request. Skip blob service SAS validation.
-2026-06-11T12:44:07.720Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.  ErrorHTTPStatusCode=403 ErrorHTTPStatusMessage=Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature. ErrorHTTPHeaders={"x-ms-error-code":"AuthorizationFailure","x-ms-request-id":"76ec0857-209f-4846-9597-f91e64c4f35b"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>AuthorizationFailure</Code>\n  <Message>Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.\nRequestId:76ec0857-209f-4846-9597-f91e64c4f35b\nTime:2026-06-11T12:44:07.709Z</Message>\n</Error>" ErrorStack="StorageError: Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.\n    at StorageErrorFactory.getAuthorizationFailure (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:144:16)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/AuthenticationMiddlewareFactory.js:25:56\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP code: 403
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP status message: Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=AuthorizationFailure
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=76ec0857-209f-4846-9597-f91e64c4f35b
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set content type: application/xml
-2026-06-11T12:44:07.721Z 76ec0857-209f-4846-9597-f91e64c4f35b error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>AuthorizationFailure</Code>\n  <Message>Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature.\nRequestId:76ec0857-209f-4846-9597-f91e64c4f35b\nTime:2026-06-11T12:44:07.709Z</Message>\n</Error>"
-2026-06-11T12:44:07.724Z 76ec0857-209f-4846-9597-f91e64c4f35b verbose: Send Blob telemetry: B_Blob_Download
-2026-06-11T12:44:07.725Z 76ec0857-209f-4846-9597-f91e64c4f35b info: EndMiddleware: End response. TotalTimeInMS=37 StatusCode=403 StatusMessage=Server failed to authenticate the request. Make sure the value of the Authorization header is formed correctly including the signature. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"AuthorizationFailure","x-ms-request-id":"76ec0857-209f-4846-9597-f91e64c4f35b","content-type":"application/xml"}
-2026-06-11T12:44:07.777Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/favicon.ico RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:10000/devstoreaccount1/freelancing-files/profiles/2026/06/10/1_2771ec4e-3d74-4e2c-97bc-918fca7735ae.png","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
-2026-06-11T12:44:07.777Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd info: BlobStorageContextMiddleware: Account=favicon.ico Container=undefined Blob=
-2026-06-11T12:44:07.777Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd verbose: DispatchMiddleware: Dispatching request...
-2026-06-11T12:44:07.778Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: DispatchMiddleware: Incoming URL doesn't match any of swagger defined request patterns.
-2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
-2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: ErrorName=UnsupportedRequestError ErrorMessage=Incoming URL doesn't match any of swagger defined request patterns.  ErrorHTTPStatusCode=400 ErrorHTTPStatusMessage=undefined ErrorHTTPHeaders=undefined ErrorHTTPBody=undefined ErrorStack="UnsupportedRequestError: Incoming URL doesn't match any of swagger defined request patterns.\n    at dispatchMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/dispatch.middleware.js:41:30)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:50:47\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)\n    at blobStorageContextMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:137:5)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:15:16\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)"
-2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: Set HTTP code: 400
-2026-06-11T12:44:07.779Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd error: ErrorMiddleware: Set HTTP body: undefined
-2026-06-11T12:44:07.780Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd verbose: Send Blob telemetry: B_Service_SetProperties
-2026-06-11T12:44:07.780Z 6a4130fd-6cf9-4b06-a16c-ace78b80fecd info: EndMiddleware: End response. TotalTimeInMS=4 StatusCode=400 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0"}
-2026-06-11T12:45:05.765Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:45:05.765Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:45:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:45:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:45:05.790Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:45:05.790Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:45:05.790Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:45:05.791Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:45:05.792Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:45:05.792Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:46:05.770Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:46:05.770Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:46:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:46:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:46:05.791Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:46:05.791Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:46:05.792Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:46:05.792Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:46:05.793Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:46:05.793Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:47:05.774Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:47:05.774Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:47:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:47:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:47:05.793Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:47:05.794Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:47:05.795Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:47:05.795Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:47:05.796Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:47:05.796Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:48:05.778Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:48:05.778Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:48:05.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:48:05.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:48:05.795Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:48:05.795Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:48:05.796Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:48:05.796Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:48:05.796Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:48:05.796Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:49:05.783Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:49:05.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:49:05.784Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:49:05.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:49:05.796Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:49:05.796Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:49:05.796Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
-2026-06-11T12:49:05.797Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:49:05.797Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:49:05.797Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:50:05.788Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:50:05.797Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:50:05.797Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:50:05.798Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:50:05.798Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:50:05.798Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:50:05.799Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:51:05.792Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:51:05.798Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:51:05.798Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:51:05.798Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:51:05.799Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:51:05.799Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:51:05.799Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:52:05.797Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:52:05.799Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:52:05.799Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:52:05.799Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:52:05.799Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:52:05.800Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:52:05.800Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:52:05.800Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:52:05.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:52:05.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:53:05.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:53:05.801Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
-2026-06-11T12:53:05.801Z 	 info: QueueGCManger:markSweep() Get all extents.
-2026-06-11T12:53:05.801Z 	 info: QueueGCManager:marksweep() Get 0 extents.
-2026-06-11T12:53:05.801Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
-2026-06-11T12:53:05.801Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
-2026-06-11T12:53:05.802Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
-2026-06-11T12:53:05.802Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
-2026-06-11T12:53:05.802Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
-2026-06-11T12:53:05.802Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
-2026-06-11T12:53:10.259Z 	 verbose: Send stop telemetry
-2026-06-11T12:53:10.260Z 	 info: Azurite Blob service is closing...
-2026-06-11T12:53:10.260Z 	 info: Azurite Queue service is closing...
-2026-06-11T12:53:10.260Z 	 info: Azurite Table service is closing...
-2026-06-11T12:53:10.261Z 	 info: BlobGCManager:close() Start closing BlobGCManager. Set status to Closing.
-2026-06-11T12:53:10.261Z 	 info: QueueGCManager:close() Start closing QueueGCManager, set status to Closing.
-2026-06-11T12:53:10.262Z 	 info: BlobGCManager:start() Mark and sweep loop is closed.
-2026-06-11T12:53:10.262Z 	 info: BlobGCManager:close() BlobGCManager successfully closed. Set status to Closed.
-2026-06-11T12:53:10.262Z 	 info: QueueGCManager:start() Mark and sweep loop is closed.
-2026-06-11T12:53:10.262Z 	 info: QueueGCManager:close() QueueGCManager successfully closed, set status to Closed.
-2026-06-11T12:53:10.262Z 	 info: Azurite Table service successfully closed
-2026-06-11T12:53:10.263Z 	 info: Azurite Blob service successfully closed
-2026-06-11T12:53:10.263Z 	 info: Azurite Queue service successfully closed
+2026-06-12T01:38:21.743Z 	 info: Azurite Blob service is starting on 127.0.0.1:10000
+2026-06-12T01:38:21.746Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:38:21.746Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:38:21.756Z 	 info: BlobGCManager:start() Starting BlobGCManager. Set status to Initializing.
+2026-06-12T01:38:21.757Z 	 info: BlobGCManager:start() Trigger mark and sweep loop. Set status to Running.
+2026-06-12T01:38:21.757Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
+2026-06-12T01:38:21.758Z 	 info: BlobGCManager:markSweep() Get all extents.
+2026-06-12T01:38:21.758Z 	 info: BlobGCManager:start() BlobGCManager successfully started.
+2026-06-12T01:38:21.760Z 	 info: BlobGCManager:markSweep() Got 3 extents.
+2026-06-12T01:38:21.760Z 	 info: BlobGCManager:markSweep() Get referred extents.
+2026-06-12T01:38:21.761Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:38:21.761Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 4ms.
+2026-06-12T01:38:21.761Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
+2026-06-12T01:38:21.765Z 	 info: Azurite Blob service successfully listens on http://127.0.0.1:10000
+2026-06-12T01:38:21.765Z 	 info: Azurite Queue service is starting on 127.0.0.1:10001
+2026-06-12T01:38:21.765Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:38:21.765Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:38:21.773Z 	 info: QueueGCManager:start() Starting QueueGCManager, set status to Initializing
+2026-06-12T01:38:21.774Z 	 info: QueueGCManager:start() Trigger mark and sweep loop, set status to Running.
+2026-06-12T01:38:21.774Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:38:21.774Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:38:21.774Z 	 info: QueueGCManager:start() QueueGCManager successfully started.
+2026-06-12T01:38:21.775Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:38:21.775Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:38:21.775Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:38:21.775Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:38:21.775Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:38:21.777Z 	 info: Azurite Queue service successfully listens on http://127.0.0.1:10001
+2026-06-12T01:38:21.778Z 	 info: Azurite Table service is starting on 127.0.0.1:10002
+2026-06-12T01:38:21.778Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:38:21.778Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:38:21.781Z 	 info: Azurite Table service successfully listens on http://127.0.0.1:10002
+2026-06-12T01:38:21.782Z 	 info: InstaceID 507daafd-6e0e-4f82-90a4-877edb15f261, SessionID 38cdb64e-0610-4116-a075-5ebba607f779.
+2026-06-12T01:38:21.804Z 	 info: Telemetry initialize successfully.
+2026-06-12T01:38:21.808Z 	 verbose: Send start telemetry
+2026-06-12T01:39:21.751Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:39:21.751Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:39:21.766Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:39:21.767Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:39:21.775Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:39:21.776Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:39:21.776Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:39:21.776Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:39:21.776Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:39:21.776Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:39:21.776Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:39:21.778Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:39:21.778Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:40:21.756Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:40:21.756Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:40:21.767Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:40:21.767Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:40:21.776Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:40:21.776Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:40:21.777Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:40:21.777Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:40:21.777Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:40:21.777Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:40:21.777Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:40:21.777Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:40:21.778Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:41:21.761Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:41:21.761Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:41:21.767Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:41:21.768Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:41:21.778Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:41:21.778Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:41:21.778Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:41:21.778Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:41:21.779Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:41:21.779Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:41:21.779Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:41:21.779Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:41:21.779Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:41:26.036Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png?sv=2026-06-06&se=2026-06-12T14%3A20%3A59Z&sr=b&sp=r&sig=T1owZ2m4HqURjwYOfdBa3qTxx%2Bv2ZUGZkw6d909p7tA%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:41:26.037Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:41:26.038Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:41:26.044Z 059f687f-635d-41e6-8268-b15ca8642c52 info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:41:26.046Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:41:26.046Z 059f687f-635d-41e6-8268-b15ca8642c52 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:41:26.046Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:41:26.046Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:41:26.050Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:41:26.051Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:41:26.051Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:41:26.052Z 059f687f-635d-41e6-8268-b15ca8642c52 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:41:26.052Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:41:26.052Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:41:26.052Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:41:26.052Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: T1owZ2m4HqURjwYOfdBa3qTxx+v2ZUGZkw6d909p7tA=
+2026-06-12T01:41:26.052Z 059f687f-635d-41e6-8268-b15ca8642c52 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:41:26.053Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:41:26.053Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:41:26.053Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:41:26.053Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:41:26.053Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: T1owZ2m4HqURjwYOfdBa3qTxx+v2ZUGZkw6d909p7tA=
+2026-06-12T01:41:26.053Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:41:26.054Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-12T14:20:59Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png","signedResource":"b"}
+2026-06-12T01:41:26.054Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-12T14:20:59Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Calculated signature is: T1owZ2m4HqURjwYOfdBa3qTxx+v2ZUGZkw6d909p7tA=
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:41:26.055Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:41:26.056Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:41:26.058Z 059f687f-635d-41e6-8268-b15ca8642c52 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2026-06-12T01:41:26.061Z 059f687f-635d-41e6-8268-b15ca8642c52 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-126693 RequiredContentLength=126694
+2026-06-12T01:41:26.062Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: OperationQueue.operate() Schedule incoming job 5a3bee7a-0f1f-4967-b471-8ffcceee6e6c
+2026-06-12T01:41:26.062Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2026-06-12T01:41:26.063Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:52958c00-d343-4403-95aa-7de8434597db path:azurite_data/__blobstorage__/52958c00-d343-4403-95aa-7de8434597db offset:1363313 count:126694 end:1490006
+2026-06-12T01:41:26.063Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: OperationQueue.operate() Job 5a3bee7a-0f1f-4967-b471-8ffcceee6e6c completes callback, resolve.
+2026-06-12T01:41:26.064Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: SerializerMiddleware: Start serializing...
+2026-06-12T01:41:26.067Z 059f687f-635d-41e6-8268-b15ca8642c52 info: Serializer: Start returning stream body.
+2026-06-12T01:41:26.069Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2026-06-12T01:41:26.069Z 059f687f-635d-41e6-8268-b15ca8642c52 debug: OperationQueue:execute() return. Operation.length === 0
+2026-06-12T01:41:26.077Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:41:26.078Z 059f687f-635d-41e6-8268-b15ca8642c52 info: EndMiddleware: End response. TotalTimeInMS=43 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Thu, 11 Jun 2026 14:20:59 GMT","x-ms-creation-time":"Thu, 11 Jun 2026 14:20:59 GMT","content-length":"126694","content-type":"image/png","etag":"\"0x1F3FDEB0A7F0690\"","content-md5":"ctiq0ncnencK3oCMGbjM9w==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"059f687f-635d-41e6-8268-b15ca8642c52","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Fri, 12 Jun 2026 01:41:26 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"ctiq0ncnencK3oCMGbjM9w=="}
+2026-06-12T01:41:26.079Z 059f687f-635d-41e6-8268-b15ca8642c52 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:52958c00-d343-4403-95aa-7de8434597db path:azurite_data/__blobstorage__/52958c00-d343-4403-95aa-7de8434597db offset:1363313 count:126694 end:1490006
+2026-06-12T01:41:26.121Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/favicon.ico RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:10000/devstoreaccount1/freelancing-files/profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png?sv=2026-06-06&se=2026-06-12T14%3A20%3A59Z&sr=b&sp=r&sig=T1owZ2m4HqURjwYOfdBa3qTxx%2Bv2ZUGZkw6d909p7tA%3D","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:41:26.122Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 info: BlobStorageContextMiddleware: Account=favicon.ico Container=undefined Blob=
+2026-06-12T01:41:26.122Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:41:26.123Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 error: DispatchMiddleware: Incoming URL doesn't match any of swagger defined request patterns.
+2026-06-12T01:41:26.123Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:41:26.123Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 error: ErrorMiddleware: ErrorName=UnsupportedRequestError ErrorMessage=Incoming URL doesn't match any of swagger defined request patterns.  ErrorHTTPStatusCode=400 ErrorHTTPStatusMessage=undefined ErrorHTTPHeaders=undefined ErrorHTTPBody=undefined ErrorStack="UnsupportedRequestError: Incoming URL doesn't match any of swagger defined request patterns.\n    at dispatchMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/dispatch.middleware.js:41:30)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:50:47\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)\n    at blobStorageContextMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:137:5)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:15:16\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)"
+2026-06-12T01:41:26.123Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 error: ErrorMiddleware: Set HTTP code: 400
+2026-06-12T01:41:26.123Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 error: ErrorMiddleware: Set HTTP body: undefined
+2026-06-12T01:41:26.124Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 verbose: Send Blob telemetry: B_Service_SetProperties
+2026-06-12T01:41:26.124Z 0b1d4eed-2017-4f9a-9033-586dc7ff5623 info: EndMiddleware: End response. TotalTimeInMS=3 StatusCode=400 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0"}
+2026-06-12T01:42:21.766Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:42:21.766Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:42:21.768Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:42:21.768Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:42:21.779Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:42:21.780Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:42:21.780Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:42:21.780Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:42:21.780Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:42:21.780Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-12T01:42:21.780Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:42:21.781Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:42:21.781Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:42:27.967Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/favicon.ico RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","referer":"http://127.0.0.1:10000/devstoreaccount1/freelancing-files/profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png?sv=2026-06-06&se=2026-06-12T14%3A20%3A59Z&sr=b&sp=r&sig=T1owZ2m4HqURjwYOfdBa3qTxx%2Bv2ZUGZkw6d909p7tA%3D","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:42:27.968Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 info: BlobStorageContextMiddleware: Account=favicon.ico Container=undefined Blob=
+2026-06-12T01:42:27.968Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:42:27.968Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 error: DispatchMiddleware: Incoming URL doesn't match any of swagger defined request patterns.
+2026-06-12T01:42:27.969Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:42:27.969Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 error: ErrorMiddleware: ErrorName=UnsupportedRequestError ErrorMessage=Incoming URL doesn't match any of swagger defined request patterns.  ErrorHTTPStatusCode=400 ErrorHTTPStatusMessage=undefined ErrorHTTPHeaders=undefined ErrorHTTPBody=undefined ErrorStack="UnsupportedRequestError: Incoming URL doesn't match any of swagger defined request patterns.\n    at dispatchMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/dispatch.middleware.js:41:30)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:50:47\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)\n    at blobStorageContextMiddleware (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:137:5)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/middlewares/blobStorageContext.middleware.js:15:16\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)"
+2026-06-12T01:42:27.969Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 error: ErrorMiddleware: Set HTTP code: 400
+2026-06-12T01:42:27.969Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 error: ErrorMiddleware: Set HTTP body: undefined
+2026-06-12T01:42:27.970Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 verbose: Send Blob telemetry: B_Service_SetProperties
+2026-06-12T01:42:27.970Z 2f3a8a9e-7dbf-4c21-95be-84397efe7927 info: EndMiddleware: End response. TotalTimeInMS=3 StatusCode=400 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0"}
+2026-06-12T01:42:36.096Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png?sv=2026-06-06&se=2026-06-12T14%3A20%3A59Z&sr=b&sp=r&sig=T1owZ2m4HqURjwYOfdBa3qTxx%2Bv2ZUGZkw6d909p7tA%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"cross-site","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","sec-fetch-storage-access":"active","referer":"http://localhost:8080/","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8","if-none-match":"\"0x1F3FDEB0A7F0690\"","if-modified-since":"Thu, 11 Jun 2026 14:20:59 GMT"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:42:36.096Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:42:36.096Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: T1owZ2m4HqURjwYOfdBa3qTxx+v2ZUGZkw6d909p7tA=
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: T1owZ2m4HqURjwYOfdBa3qTxx+v2ZUGZkw6d909p7tA=
+2026-06-12T01:42:36.097Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-12T14:20:59Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png","signedResource":"b"}
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-12T14:20:59Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/11/1_17f595c2-a2ee-4e6c-92d0-dcfcb1d1f573.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Calculated signature is: T1owZ2m4HqURjwYOfdBa3qTxx+v2ZUGZkw6d909p7tA=
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:42:36.098Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:42:36.099Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{"ifModifiedSince":"2026-06-11T14:20:59.000Z","ifNoneMatch":"\"0x1F3FDEB0A7F0690\""}}}
+2026-06-12T01:42:36.105Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=The condition specified using HTTP conditional header(s) is not met.  ErrorHTTPStatusCode=304 ErrorHTTPStatusMessage=The condition specified using HTTP conditional header(s) is not met. ErrorHTTPHeaders={"x-ms-error-code":"ConditionNotMet","x-ms-request-id":"fea46411-2361-45c2-92a0-fb9d9fcfd0fa"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:fea46411-2361-45c2-92a0-fb9d9fcfd0fa\nTime:2026-06-12T01:42:36.100Z</Message>\n</Error>" ErrorStack="StorageError: The condition specified using HTTP conditional header(s) is not met.\n    at StorageErrorFactory.getNotModified (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:214:16)\n    at ReadConditionalHeadersValidator.validate (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:75:53)\n    at validateReadConditions (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:10:43)\n    at LokiBlobMetadataStore.downloadBlob (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/persistence/LokiBlobMetadataStore.js:817:70)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BlobHandler.download (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/handlers/BlobHandler.js:43:22)"
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Set HTTP code: 304
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Set HTTP status message: The condition specified using HTTP conditional header(s) is not met.
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=ConditionNotMet
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=fea46411-2361-45c2-92a0-fb9d9fcfd0fa
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Set content type: application/xml
+2026-06-12T01:42:36.106Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:fea46411-2361-45c2-92a0-fb9d9fcfd0fa\nTime:2026-06-12T01:42:36.100Z</Message>\n</Error>"
+2026-06-12T01:42:36.107Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:42:36.107Z fea46411-2361-45c2-92a0-fb9d9fcfd0fa info: EndMiddleware: End response. TotalTimeInMS=11 StatusCode=304 StatusMessage=The condition specified using HTTP conditional header(s) is not met. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"ConditionNotMet","x-ms-request-id":"fea46411-2361-45c2-92a0-fb9d9fcfd0fa","content-type":"application/xml"}
+2026-06-12T01:42:36.110Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png?sv=2026-06-06&se=2026-06-12T14%3A20%3A09Z&sr=b&sp=r&sig=jBouRlHZY9gw5kaPvLFHSIKLUE8jSindJHDOm%2BsFqyg%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"cross-site","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","sec-fetch-storage-access":"active","referer":"http://localhost:8080/","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8","if-none-match":"\"0x1E30381A1175380\"","if-modified-since":"Thu, 11 Jun 2026 14:20:09 GMT"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:42:36.110Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png
+2026-06-12T01:42:36.111Z 5007f517-6100-4e88-bde6-61064ceb280a verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:42:36.111Z 5007f517-6100-4e88-bde6-61064ceb280a info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: jBouRlHZY9gw5kaPvLFHSIKLUE8jSindJHDOm+sFqyg=
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: jBouRlHZY9gw5kaPvLFHSIKLUE8jSindJHDOm+sFqyg=
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-12T14:20:09Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png","signedResource":"b"}
+2026-06-12T01:42:36.112Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-12T14:20:09Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/11/2_7cb1ea71-ace5-42e6-a2aa-c433c414ef7e.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Calculated signature is: jBouRlHZY9gw5kaPvLFHSIKLUE8jSindJHDOm+sFqyg=
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:42:36.113Z 5007f517-6100-4e88-bde6-61064ceb280a info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{"ifModifiedSince":"2026-06-11T14:20:09.000Z","ifNoneMatch":"\"0x1E30381A1175380\""}}}
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=The condition specified using HTTP conditional header(s) is not met.  ErrorHTTPStatusCode=304 ErrorHTTPStatusMessage=The condition specified using HTTP conditional header(s) is not met. ErrorHTTPHeaders={"x-ms-error-code":"ConditionNotMet","x-ms-request-id":"5007f517-6100-4e88-bde6-61064ceb280a"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:5007f517-6100-4e88-bde6-61064ceb280a\nTime:2026-06-12T01:42:36.113Z</Message>\n</Error>" ErrorStack="StorageError: The condition specified using HTTP conditional header(s) is not met.\n    at StorageErrorFactory.getNotModified (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:214:16)\n    at ReadConditionalHeadersValidator.validate (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:75:53)\n    at validateReadConditions (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:10:43)\n    at LokiBlobMetadataStore.downloadBlob (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/persistence/LokiBlobMetadataStore.js:817:70)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BlobHandler.download (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/handlers/BlobHandler.js:43:22)"
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Set HTTP code: 304
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Set HTTP status message: The condition specified using HTTP conditional header(s) is not met.
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=ConditionNotMet
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=5007f517-6100-4e88-bde6-61064ceb280a
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Set content type: application/xml
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:5007f517-6100-4e88-bde6-61064ceb280a\nTime:2026-06-12T01:42:36.113Z</Message>\n</Error>"
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:42:36.114Z 5007f517-6100-4e88-bde6-61064ceb280a info: EndMiddleware: End response. TotalTimeInMS=4 StatusCode=304 StatusMessage=The condition specified using HTTP conditional header(s) is not met. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"ConditionNotMet","x-ms-request-id":"5007f517-6100-4e88-bde6-61064ceb280a","content-type":"application/xml"}
+2026-06-12T01:43:21.771Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:43:21.771Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:43:21.772Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:43:21.772Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:43:21.780Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:43:21.781Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:43:21.781Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:43:21.781Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:43:21.781Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:43:21.781Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-12T01:43:21.781Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:43:21.782Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:43:21.782Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:44:21.777Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:44:21.777Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:44:21.777Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:44:21.777Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:44:21.781Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:44:21.781Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:44:21.781Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:44:21.782Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:44:21.782Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:44:21.782Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:44:21.782Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:44:21.784Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:44:21.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:45:21.782Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:45:21.782Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:45:21.782Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:45:21.782Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:45:21.783Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:45:21.783Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:45:21.783Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:45:21.783Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:45:21.783Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:45:21.784Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:45:21.784Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:45:21.784Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:45:21.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:46:15.866Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: BlobStorageContextMiddleware: RequestMethod=PUT RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files?restype=container RequestHeaders:{"host":"127.0.0.1:10000","x-ms-version":"2026-06-06","accept":"application/xml","x-ms-client-request-id":"aeacffa1-eebb-4080-b70d-365f02796463","x-ms-return-client-request-id":"true","user-agent":"azsdk-net-Storage.Blobs/12.29.0 (.NET 10.0.3; Debian GNU/Linux 12 (bookworm))","x-ms-date":"Fri, 12 Jun 2026 01:46:15 GMT","authorization":"SharedKey devstoreaccount1:K2PTmAFpb8JsotQEA56v0IyR2egakgsor2n+qzWyVNI=","traceparent":"00-62f954cc3607ed8d2a9b190123c5ec3e-1682cd4006795a20-00","content-length":"0"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:46:15.866Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=
+2026-06-12T01:46:15.866Z cf475a6b-37de-487a-9673-f4c24e2f4f7d verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: DispatchMiddleware: Operation=Container_Create
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: 
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:46:15.867Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:46:15.879Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: BlobSharedKeyAuthenticator:validate() [STRING TO SIGN]:"PUT\n\n\n\n\n\n\n\n\n\n\n\nx-ms-client-request-id:aeacffa1-eebb-4080-b70d-365f02796463\nx-ms-date:Fri, 12 Jun 2026 01:46:15 GMT\nx-ms-return-client-request-id:true\nx-ms-version:2026-06-06\n/devstoreaccount1/devstoreaccount1/freelancing-files\nrestype:container"
+2026-06-12T01:46:15.879Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: BlobSharedKeyAuthenticator:validate() Calculated authentication header based on key1: SharedKey devstoreaccount1:K2PTmAFpb8JsotQEA56v0IyR2egakgsor2n+qzWyVNI=
+2026-06-12T01:46:15.879Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: BlobSharedKeyAuthenticator:validate() Signature 1 matched.
+2026-06-12T01:46:15.880Z cf475a6b-37de-487a-9673-f4c24e2f4f7d verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:46:15.880Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: HandlerMiddleware: DeserializedParameters={"options":{"metadata":{},"requestId":"aeacffa1-eebb-4080-b70d-365f02796463","containerCpkScopeInfo":{}},"restype":"container","version":"2026-06-06"}
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=The specified container already exists.  ErrorHTTPStatusCode=409 ErrorHTTPStatusMessage=The specified container already exists. ErrorHTTPHeaders={"x-ms-error-code":"ContainerAlreadyExists","x-ms-request-id":"cf475a6b-37de-487a-9673-f4c24e2f4f7d"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ContainerAlreadyExists</Code>\n  <Message>The specified container already exists.\nRequestId:cf475a6b-37de-487a-9673-f4c24e2f4f7d\nTime:2026-06-12T01:46:15.880Z</Message>\n</Error>" ErrorStack="StorageError: The specified container already exists.\n    at StorageErrorFactory.getContainerAlreadyExists (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:23:16)\n    at LokiBlobMetadataStore.createContainer (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/persistence/LokiBlobMetadataStore.js:299:49)\n    at ContainerHandler.create (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/handlers/ContainerHandler.js:44:34)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/middleware/HandlerMiddlewareFactory.js:58:18\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/generated/ExpressMiddlewareFactory.js:78:63\n    at Layer.handle [as handle_request] (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:328:13)\n    at /home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:286:9\n    at Function.process_params (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:346:12)\n    at next (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/node_modules/express/lib/router/index.js:280:10)"
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Set HTTP code: 409
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Set HTTP status message: The specified container already exists.
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=ContainerAlreadyExists
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=cf475a6b-37de-487a-9673-f4c24e2f4f7d
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Set content type: application/xml
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ContainerAlreadyExists</Code>\n  <Message>The specified container already exists.\nRequestId:cf475a6b-37de-487a-9673-f4c24e2f4f7d\nTime:2026-06-12T01:46:15.880Z</Message>\n</Error>"
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d verbose: Send Blob telemetry: B_Container_Create
+2026-06-12T01:46:15.881Z cf475a6b-37de-487a-9673-f4c24e2f4f7d info: EndMiddleware: End response. TotalTimeInMS=16 StatusCode=409 StatusMessage=The specified container already exists. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"ContainerAlreadyExists","x-ms-request-id":"cf475a6b-37de-487a-9673-f4c24e2f4f7d","content-type":"application/xml"}
+2026-06-12T01:46:16.102Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: BlobStorageContextMiddleware: RequestMethod=PUT RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png RequestHeaders:{"host":"127.0.0.1:10000","x-ms-blob-type":"BlockBlob","x-ms-blob-content-type":"image/png","x-ms-version":"2026-06-06","accept":"application/xml","x-ms-client-request-id":"93282c3b-e0a4-4bc1-a5a0-3dd11f01558e","x-ms-return-client-request-id":"true","user-agent":"azsdk-net-Storage.Blobs/12.29.0 (.NET 10.0.3; Debian GNU/Linux 12 (bookworm))","x-ms-date":"Fri, 12 Jun 2026 01:46:16 GMT","authorization":"SharedKey devstoreaccount1:b4a9kLAGumEgc/ud4pui7Xj35xDAyOuJhYebj51NdAU=","traceparent":"00-62f954cc3607ed8d2a9b190123c5ec3e-1682cd4006795a20-00","content-length":"126694","content-type":"application/octet-stream"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:46:16.102Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:16.102Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:46:16.102Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: DispatchMiddleware: Operation=BlockBlob_Upload
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: BlobSharedKeyAuthenticator:validate() [STRING TO SIGN]:"PUT\n\n\n126694\n\napplication/octet-stream\n\n\n\n\n\n\nx-ms-blob-content-type:image/png\nx-ms-blob-type:BlockBlob\nx-ms-client-request-id:93282c3b-e0a4-4bc1-a5a0-3dd11f01558e\nx-ms-date:Fri, 12 Jun 2026 01:46:16 GMT\nx-ms-return-client-request-id:true\nx-ms-version:2026-06-06\n/devstoreaccount1/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png"
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: BlobSharedKeyAuthenticator:validate() Calculated authentication header based on key1: SharedKey devstoreaccount1:b4a9kLAGumEgc/ud4pui7Xj35xDAyOuJhYebj51NdAU=
+2026-06-12T01:46:16.103Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: BlobSharedKeyAuthenticator:validate() Signature 1 matched.
+2026-06-12T01:46:16.104Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:46:16.104Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: HandlerMiddleware: DeserializedParameters={"options":{"metadata":{},"requestId":"93282c3b-e0a4-4bc1-a5a0-3dd11f01558e","blobHTTPHeaders":{"blobContentType":"image/png"},"leaseAccessConditions":{},"cpkInfo":{},"cpkScopeInfo":{},"modifiedAccessConditions":{}},"contentLength":126694,"version":"2026-06-06","blobType":"BlockBlob","body":"ReadableStream"}
+2026-06-12T01:46:16.104Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue.operate() Schedule incoming job 8d3b4266-cde9-4226-aed8-01a786129477
+2026-06-12T01:46:16.104Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:50 operations.length:1
+2026-06-12T01:46:16.105Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: FSExtentStore:appendExtent() Select extent from idle location for extent append operation. LocationId:1 extentId:4b45a95d-f8df-4d6b-b4af-555936d29486 offset:0 MAX_EXTENT_SIZE:67108864 
+2026-06-12T01:46:16.105Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:appendExtent() Get fd:undefined for extent:4b45a95d-f8df-4d6b-b4af-555936d29486 from cache.
+2026-06-12T01:46:16.106Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:appendExtent() Open file:azurite_data/__blobstorage__/4b45a95d-f8df-4d6b-b4af-555936d29486 for extent:4b45a95d-f8df-4d6b-b4af-555936d29486, get new fd:28
+2026-06-12T01:46:16.106Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:appendExtent() Created write stream for fd:28
+2026-06-12T01:46:16.106Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:appendExtent() Start writing to extent 4b45a95d-f8df-4d6b-b4af-555936d29486
+2026-06-12T01:46:16.106Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:streamPipe() Start piping data to write stream
+2026-06-12T01:46:16.108Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:streamPipe() Readable stream triggers close event, 126694 bytes piped
+2026-06-12T01:46:16.108Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:streamPipe() Invoke write stream end()
+2026-06-12T01:46:16.108Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:streamPipe() Readable stream triggers close event, 126694 bytes piped
+2026-06-12T01:46:16.108Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:streamPipe() Writable stream triggers finish event, after 126694 bytes piped. Flush data to fd:28.
+2026-06-12T01:46:16.109Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:streamPipe() Flush data to fd:28 successfully. Resolve streamPipe().
+2026-06-12T01:46:16.109Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:appendExtent() Write finish, start updating extent metadata. extent:{"id":"4b45a95d-f8df-4d6b-b4af-555936d29486","locationId":"Default","path":"4b45a95d-f8df-4d6b-b4af-555936d29486","size":126694,"lastModifiedInMS":1781228776109}
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: FSExtentStore:appendExtent() Update extent metadata done. Resolve()
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue.operate() Job 8d3b4266-cde9-4226-aed8-01a786129477 completes callback, resolve.
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue.operate() Schedule incoming job ab0ca9dc-8a2d-484c-b95f-e9f6088f5de8
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:4b45a95d-f8df-4d6b-b4af-555936d29486 path:azurite_data/__blobstorage__/4b45a95d-f8df-4d6b-b4af-555936d29486 offset:0 count:126694 end:126693
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue.operate() Job ab0ca9dc-8a2d-484c-b95f-e9f6088f5de8 completes callback, resolve.
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:50 operations.length:0
+2026-06-12T01:46:16.110Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue:execute() return. Operation.length === 0
+2026-06-12T01:46:16.111Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2026-06-12T01:46:16.111Z 2196e210-0abe-4d67-bb32-09dfb0089eaa debug: OperationQueue:execute() return. Operation.length === 0
+2026-06-12T01:46:16.112Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: SerializerMiddleware: Start serializing...
+2026-06-12T01:46:16.112Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: Send Blob telemetry: B_BlockBlob_Upload
+2026-06-12T01:46:16.113Z 2196e210-0abe-4d67-bb32-09dfb0089eaa info: EndMiddleware: End response. TotalTimeInMS=11 StatusCode=201 StatusMessage=undefined Headers={"server":"Azurite-Blob/3.35.0","etag":"\"0x1C640244884BEF0\"","last-modified":"Fri, 12 Jun 2026 01:46:16 GMT","content-md5":"ctiq0ncnencK3oCMGbjM9w==","x-ms-client-request-id":"93282c3b-e0a4-4bc1-a5a0-3dd11f01558e","x-ms-request-id":"2196e210-0abe-4d67-bb32-09dfb0089eaa","x-ms-version":"2025-11-05","date":"Fri, 12 Jun 2026 01:46:16 GMT","x-ms-request-server-encrypted":"true"}
+2026-06-12T01:46:16.113Z 2196e210-0abe-4d67-bb32-09dfb0089eaa verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:4b45a95d-f8df-4d6b-b4af-555936d29486 path:azurite_data/__blobstorage__/4b45a95d-f8df-4d6b-b4af-555936d29486 offset:0 count:126694 end:126693
+2026-06-12T01:46:16.143Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png?sv=2026-06-06&se=2026-06-13T01%3A46%3A16Z&sr=b&sp=r&sig=GTGdiRrGJxoPNdY5PjCrAAaqhP%2FHssAVkAUtzXMkSaA%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"cross-site","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","sec-fetch-storage-access":"active","referer":"http://localhost:8080/","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:46:16.143Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:16.143Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:46:16.143Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-13T01:46:16Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png","signedResource":"b"}
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-13T01:46:16Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Calculated signature is: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:46:16.144Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{}}}
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: BlobHandler:downloadBlockBlobOrAppendBlob() NormalizedDownloadRange=bytes=0-126693 RequiredContentLength=126694
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: OperationQueue.operate() Schedule incoming job 5ce425a5-057c-4344-9a58-7288a5fb94ce
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:1
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: FSExtentStore:readExtent() Creating read stream. LocationId:Default extentId:4b45a95d-f8df-4d6b-b4af-555936d29486 path:azurite_data/__blobstorage__/4b45a95d-f8df-4d6b-b4af-555936d29486 offset:0 count:126694 end:126693
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: OperationQueue.operate() Job 5ce425a5-057c-4344-9a58-7288a5fb94ce completes callback, resolve.
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: SerializerMiddleware: Start serializing...
+2026-06-12T01:46:16.145Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: Serializer: Start returning stream body.
+2026-06-12T01:46:16.146Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: OperationQueue:execute() Current runningConcurrency:0 maxConcurrency:100 operations.length:0
+2026-06-12T01:46:16.146Z 558a79ba-72ef-43b6-bc75-3b4a97007785 debug: OperationQueue:execute() return. Operation.length === 0
+2026-06-12T01:46:16.147Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:46:16.147Z 558a79ba-72ef-43b6-bc75-3b4a97007785 info: EndMiddleware: End response. TotalTimeInMS=4 StatusCode=200 StatusMessage=OK Headers={"server":"Azurite-Blob/3.35.0","last-modified":"Fri, 12 Jun 2026 01:46:16 GMT","x-ms-creation-time":"Fri, 12 Jun 2026 01:46:16 GMT","content-length":"126694","content-type":"image/png","etag":"\"0x1C640244884BEF0\"","content-md5":"ctiq0ncnencK3oCMGbjM9w==","x-ms-blob-type":"BlockBlob","x-ms-lease-state":"available","x-ms-lease-status":"unlocked","x-ms-request-id":"558a79ba-72ef-43b6-bc75-3b4a97007785","x-ms-version":"2025-11-05","accept-ranges":"bytes","date":"Fri, 12 Jun 2026 01:46:16 GMT","x-ms-server-encrypted":"true","x-ms-blob-content-md5":"ctiq0ncnencK3oCMGbjM9w=="}
+2026-06-12T01:46:16.148Z 558a79ba-72ef-43b6-bc75-3b4a97007785 verbose: FSExtentStore:readExtent() Read stream closed. LocationId:Default extentId:4b45a95d-f8df-4d6b-b4af-555936d29486 path:azurite_data/__blobstorage__/4b45a95d-f8df-4d6b-b4af-555936d29486 offset:0 count:126694 end:126693
+2026-06-12T01:46:18.749Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png?sv=2026-06-06&se=2026-06-13T01%3A46%3A16Z&sr=b&sp=r&sig=GTGdiRrGJxoPNdY5PjCrAAaqhP%2FHssAVkAUtzXMkSaA%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","if-none-match":"\"0x1C640244884BEF0\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","if-modified-since":"Fri, 12 Jun 2026 01:46:16 GMT","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"cross-site","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","sec-fetch-storage-access":"active","referer":"http://localhost:8080/","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:46:18.750Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:18.750Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:46:18.751Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:46:18.751Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:46:18.751Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:46:18.751Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:18.751Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-13T01:46:16Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png","signedResource":"b"}
+2026-06-12T01:46:18.752Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-13T01:46:16Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Calculated signature is: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:46:18.753Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:46:18.754Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:46:18.754Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{"ifModifiedSince":"2026-06-12T01:46:16.000Z","ifNoneMatch":"\"0x1C640244884BEF0\""}}}
+2026-06-12T01:46:18.755Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=The condition specified using HTTP conditional header(s) is not met.  ErrorHTTPStatusCode=304 ErrorHTTPStatusMessage=The condition specified using HTTP conditional header(s) is not met. ErrorHTTPHeaders={"x-ms-error-code":"ConditionNotMet","x-ms-request-id":"1aff038b-e769-41fb-bf9d-e04e242bfad1"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:1aff038b-e769-41fb-bf9d-e04e242bfad1\nTime:2026-06-12T01:46:18.755Z</Message>\n</Error>" ErrorStack="StorageError: The condition specified using HTTP conditional header(s) is not met.\n    at StorageErrorFactory.getNotModified (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:214:16)\n    at ReadConditionalHeadersValidator.validate (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:75:53)\n    at validateReadConditions (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:10:43)\n    at LokiBlobMetadataStore.downloadBlob (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/persistence/LokiBlobMetadataStore.js:817:70)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BlobHandler.download (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/handlers/BlobHandler.js:43:22)"
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Set HTTP code: 304
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Set HTTP status message: The condition specified using HTTP conditional header(s) is not met.
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=ConditionNotMet
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=1aff038b-e769-41fb-bf9d-e04e242bfad1
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Set content type: application/xml
+2026-06-12T01:46:18.756Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:1aff038b-e769-41fb-bf9d-e04e242bfad1\nTime:2026-06-12T01:46:18.755Z</Message>\n</Error>"
+2026-06-12T01:46:18.757Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:46:18.757Z 1aff038b-e769-41fb-bf9d-e04e242bfad1 info: EndMiddleware: End response. TotalTimeInMS=8 StatusCode=304 StatusMessage=The condition specified using HTTP conditional header(s) is not met. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"ConditionNotMet","x-ms-request-id":"1aff038b-e769-41fb-bf9d-e04e242bfad1","content-type":"application/xml"}
+2026-06-12T01:46:20.989Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png?sv=2026-06-06&se=2026-06-13T01%3A46%3A16Z&sr=b&sp=r&sig=GTGdiRrGJxoPNdY5PjCrAAaqhP%2FHssAVkAUtzXMkSaA%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","if-none-match":"\"0x1C640244884BEF0\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","if-modified-since":"Fri, 12 Jun 2026 01:46:16 GMT","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"cross-site","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","sec-fetch-storage-access":"active","referer":"http://localhost:8080/","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:46:20.989Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:20.989Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:46:20.990Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:46:20.990Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:46:20.990Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:46:20.990Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:20.990Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:20.992Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-13T01:46:16Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png","signedResource":"b"}
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-13T01:46:16Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Calculated signature is: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:46:20.993Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{"ifModifiedSince":"2026-06-12T01:46:16.000Z","ifNoneMatch":"\"0x1C640244884BEF0\""}}}
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=The condition specified using HTTP conditional header(s) is not met.  ErrorHTTPStatusCode=304 ErrorHTTPStatusMessage=The condition specified using HTTP conditional header(s) is not met. ErrorHTTPHeaders={"x-ms-error-code":"ConditionNotMet","x-ms-request-id":"41fb7a02-968a-4fa7-b4f9-bc14883a38a3"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:41fb7a02-968a-4fa7-b4f9-bc14883a38a3\nTime:2026-06-12T01:46:20.994Z</Message>\n</Error>" ErrorStack="StorageError: The condition specified using HTTP conditional header(s) is not met.\n    at StorageErrorFactory.getNotModified (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:214:16)\n    at ReadConditionalHeadersValidator.validate (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:75:53)\n    at validateReadConditions (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:10:43)\n    at LokiBlobMetadataStore.downloadBlob (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/persistence/LokiBlobMetadataStore.js:817:70)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BlobHandler.download (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/handlers/BlobHandler.js:43:22)"
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Set HTTP code: 304
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Set HTTP status message: The condition specified using HTTP conditional header(s) is not met.
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=ConditionNotMet
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=41fb7a02-968a-4fa7-b4f9-bc14883a38a3
+2026-06-12T01:46:20.996Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Set content type: application/xml
+2026-06-12T01:46:20.997Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:41fb7a02-968a-4fa7-b4f9-bc14883a38a3\nTime:2026-06-12T01:46:20.994Z</Message>\n</Error>"
+2026-06-12T01:46:20.997Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:46:20.997Z 41fb7a02-968a-4fa7-b4f9-bc14883a38a3 info: EndMiddleware: End response. TotalTimeInMS=8 StatusCode=304 StatusMessage=The condition specified using HTTP conditional header(s) is not met. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"ConditionNotMet","x-ms-request-id":"41fb7a02-968a-4fa7-b4f9-bc14883a38a3","content-type":"application/xml"}
+2026-06-12T01:46:21.783Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:46:21.783Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:46:21.784Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:46:21.784Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:46:21.785Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:46:21.786Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:46:21.786Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:46:21.786Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:46:21.786Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:46:21.786Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-12T01:46:21.786Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:46:21.786Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:46:21.787Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:47:21.787Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:47:21.787Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:47:21.787Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:47:21.787Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:47:21.787Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:47:21.787Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:47:21.788Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:47:21.788Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:47:21.788Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:47:21.788Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:47:21.788Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:47:21.788Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:47:21.788Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:48:21.765Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
+2026-06-12T01:48:21.766Z 	 info: BlobGCManager:markSweep() Get all extents.
+2026-06-12T01:48:21.766Z 	 info: BlobGCManager:markSweep() Got 4 extents.
+2026-06-12T01:48:21.766Z 	 info: BlobGCManager:markSweep() Get referred extents.
+2026-06-12T01:48:21.767Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:48:21.767Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 1ms.
+2026-06-12T01:48:21.767Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
+2026-06-12T01:48:21.787Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:48:21.787Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:48:21.787Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:48:21.787Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-12T01:48:21.788Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:48:21.788Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:48:21.788Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:49:21.791Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:49:21.791Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:49:21.791Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:49:21.791Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-12T01:49:21.792Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:49:21.793Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:49:21.793Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:50:21.795Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:50:21.795Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:50:21.795Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:50:21.795Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:50:21.795Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:50:21.795Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:50:21.796Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:50:21.796Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:50:21.796Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:50:21.796Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:50:21.796Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:50:21.796Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:50:21.796Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:50:55.417Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobStorageContextMiddleware: RequestMethod=GET RequestURL=http://127.0.0.1/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png?sv=2026-06-06&se=2026-06-13T01%3A46%3A16Z&sr=b&sp=r&sig=GTGdiRrGJxoPNdY5PjCrAAaqhP%2FHssAVkAUtzXMkSaA%3D RequestHeaders:{"host":"127.0.0.1:10000","connection":"keep-alive","sec-ch-ua-platform":"\"Linux\"","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36","sec-ch-ua":"\"Google Chrome\";v=\"147\", \"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"147\"","sec-ch-ua-mobile":"?0","accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","sec-fetch-site":"cross-site","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","sec-fetch-storage-access":"active","referer":"http://localhost:8080/","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,ar;q=0.8","if-none-match":"\"0x1C640244884BEF0\"","if-modified-since":"Fri, 12 Jun 2026 01:46:16 GMT"} ClientIP=127.0.0.1 Protocol=http HTTPVersion=1.1
+2026-06-12T01:50:55.417Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobStorageContextMiddleware: Account=devstoreaccount1 Container=freelancing-files Blob=profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:50:55.417Z cb894e59-1579-4a48-a73f-49f014dc1144 verbose: DispatchMiddleware: Dispatching request...
+2026-06-12T01:50:55.418Z cb894e59-1579-4a48-a73f-49f014dc1144 info: DispatchMiddleware: Operation=Blob_Download
+2026-06-12T01:50:55.418Z cb894e59-1579-4a48-a73f-49f014dc1144 verbose: AuthenticationMiddlewareFactory:createAuthenticationMiddleware() Validating authentications.
+2026-06-12T01:50:55.418Z cb894e59-1579-4a48-a73f-49f014dc1144 info: PublicAccessAuthenticator:validate() Start validation against public access.
+2026-06-12T01:50:55.418Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: PublicAccessAuthenticator:validate() Getting account properties...
+2026-06-12T01:50:55.418Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: PublicAccessAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: PublicAccessAuthenticator:validate() Skip public access authentication. Cannot get public access type for container freelancing-files
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSharedKeyAuthenticator:validate() Start validation against account shared key authentication.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSharedKeyAuthenticator:validate() Request doesn't include valid authentication header. Skip shared key authentication.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: AccountSASAuthenticator:validate() Start validation against account Shared Access Signature pattern.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: AccountSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: AccountSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: AccountSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: AccountSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: AccountSASAuthenticator:validate() Failed to get valid account SAS values from request.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Start validation against blob service Shared Access Signature pattern.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Getting account properties...
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Retrieved account name from context: devstoreaccount1, container: freelancing-files, blob: profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Got account properties successfully.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Retrieved signature from URL parameter sig: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Signed resource type is b.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Successfully got valid blob service SAS values from request. {"version":"2026-06-06","expiryTime":"2026-06-13T01:46:16Z","permissions":"r","containerName":"freelancing-files","blobName":"profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png","signedResource":"b"}
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Validate signature based account key1.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() String to sign is: "r\n\n2026-06-13T01:46:16Z\n/blob/devstoreaccount1/freelancing-files/profiles/2026/06/12/1_d893eafd-fb84-4d86-818f-b01a26cf8620.png\n\n\n\n2026-06-06\nb\n\n\n\n\n\n\n"
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Calculated signature is: GTGdiRrGJxoPNdY5PjCrAAaqhP/HssAVkAUtzXMkSaA=
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Signature based on key1 validation passed.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Validate start and expiry time.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Validate IP range.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Validate request protocol.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 debug: BlobSASAuthenticator:validate() Got permission requirements for operation Blob_Download - {"permission":"r"}
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 info: BlobSASAuthenticator:validate() Blob service SAS validation successfully.
+2026-06-12T01:50:55.419Z cb894e59-1579-4a48-a73f-49f014dc1144 verbose: DeserializerMiddleware: Start deserializing...
+2026-06-12T01:50:55.420Z cb894e59-1579-4a48-a73f-49f014dc1144 info: HandlerMiddleware: DeserializedParameters={"options":{"leaseAccessConditions":{},"cpkInfo":{},"modifiedAccessConditions":{"ifModifiedSince":"2026-06-12T01:46:16.000Z","ifNoneMatch":"\"0x1C640244884BEF0\""}}}
+2026-06-12T01:50:55.420Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Received a MiddlewareError, fill error information to HTTP response
+2026-06-12T01:50:55.420Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: ErrorName=StorageError ErrorMessage=The condition specified using HTTP conditional header(s) is not met.  ErrorHTTPStatusCode=304 ErrorHTTPStatusMessage=The condition specified using HTTP conditional header(s) is not met. ErrorHTTPHeaders={"x-ms-error-code":"ConditionNotMet","x-ms-request-id":"cb894e59-1579-4a48-a73f-49f014dc1144"} ErrorHTTPBody="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:cb894e59-1579-4a48-a73f-49f014dc1144\nTime:2026-06-12T01:50:55.420Z</Message>\n</Error>" ErrorStack="StorageError: The condition specified using HTTP conditional header(s) is not met.\n    at StorageErrorFactory.getNotModified (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/errors/StorageErrorFactory.js:214:16)\n    at ReadConditionalHeadersValidator.validate (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:75:53)\n    at validateReadConditions (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/conditions/ReadConditionalHeadersValidator.js:10:43)\n    at LokiBlobMetadataStore.downloadBlob (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/persistence/LokiBlobMetadataStore.js:817:70)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BlobHandler.download (/home/ahmed/.nvm/versions/node/v22.17.0/lib/node_modules/azurite/dist/src/blob/handlers/BlobHandler.js:43:22)"
+2026-06-12T01:50:55.420Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Set HTTP code: 304
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Set HTTP status message: The condition specified using HTTP conditional header(s) is not met.
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Set HTTP Header: x-ms-error-code=ConditionNotMet
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Set HTTP Header: x-ms-request-id=cb894e59-1579-4a48-a73f-49f014dc1144
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Set content type: application/xml
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 error: ErrorMiddleware: Set HTTP body: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<Error>\n  <Code>ConditionNotMet</Code>\n  <Message>The condition specified using HTTP conditional header(s) is not met.\nRequestId:cb894e59-1579-4a48-a73f-49f014dc1144\nTime:2026-06-12T01:50:55.420Z</Message>\n</Error>"
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 verbose: Send Blob telemetry: B_Blob_Download
+2026-06-12T01:50:55.421Z cb894e59-1579-4a48-a73f-49f014dc1144 info: EndMiddleware: End response. TotalTimeInMS=4 StatusCode=304 StatusMessage=The condition specified using HTTP conditional header(s) is not met. Headers={"server":"Azurite-Blob/3.35.0","x-ms-error-code":"ConditionNotMet","x-ms-request-id":"cb894e59-1579-4a48-a73f-49f014dc1144","content-type":"application/xml"}
+2026-06-12T01:51:21.799Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:51:21.799Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:51:21.799Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:51:21.799Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 0ms.
+2026-06-12T01:51:21.800Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:51:21.800Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:51:21.800Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:52:21.803Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:52:21.803Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:52:21.803Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:52:21.803Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:52:21.803Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-06-12T01:52:21.803Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-06-12T01:52:21.803Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-06-12T01:52:21.803Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-06-12T01:52:21.804Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-06-12T01:52:21.804Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-06-12T01:52:21.804Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-06-12T01:52:21.804Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-06-12T01:52:21.804Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-06-12T01:53:08.291Z 	 verbose: Send stop telemetry
+2026-06-12T01:53:08.292Z 	 info: Azurite Blob service is closing...
+2026-06-12T01:53:08.292Z 	 info: Azurite Queue service is closing...
+2026-06-12T01:53:08.293Z 	 info: Azurite Table service is closing...
+2026-06-12T01:53:08.294Z 	 info: BlobGCManager:close() Start closing BlobGCManager. Set status to Closing.
+2026-06-12T01:53:08.294Z 	 info: QueueGCManager:close() Start closing QueueGCManager, set status to Closing.
+2026-06-12T01:53:08.295Z 	 info: BlobGCManager:start() Mark and sweep loop is closed.
+2026-06-12T01:53:08.295Z 	 info: BlobGCManager:close() BlobGCManager successfully closed. Set status to Closed.
+2026-06-12T01:53:08.296Z 	 info: QueueGCManager:start() Mark and sweep loop is closed.
+2026-06-12T01:53:08.296Z 	 info: QueueGCManager:close() QueueGCManager successfully closed, set status to Closed.
+2026-06-12T01:53:08.296Z 	 info: Azurite Table service successfully closed
+2026-06-12T01:53:08.297Z 	 info: Azurite Blob service successfully closed
+2026-06-12T01:53:08.297Z 	 info: Azurite Queue service successfully closed

@@ -154,8 +154,7 @@ public class JobsController(
 
     private int GetUserId()
     {
-        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value 
-                          ?? User.FindFirst("sub")?.Value;
+        var userIdClaim = User.Claims.ToList()[0].Value;
         
         if (string.IsNullOrEmpty(userIdClaim))
             throw new UnauthorizedAccessException("User ID not found in token");

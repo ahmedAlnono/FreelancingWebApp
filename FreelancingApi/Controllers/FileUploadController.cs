@@ -65,8 +65,7 @@ public class UploadController(
 
     private int GetUserId()
     {
-        var userIdClaim = User.FindFirst("sub")?.Value
-                          ?? User.Claims.ToList()[0].Value;
+        var userIdClaim =  User.Claims.ToList()[0].Value;
 
         return int.Parse(userIdClaim ?? "0");
     }

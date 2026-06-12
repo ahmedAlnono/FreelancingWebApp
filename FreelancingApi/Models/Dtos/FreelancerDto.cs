@@ -1,3 +1,5 @@
+using FreelancingApi.Models.Entities;
+
 namespace FreelancingApi.Models.Dtos;
 
 public class FreelancerDto
@@ -23,13 +25,13 @@ public class FreelancerDto
 
 public class FreelnacerFilterParams
 {
-    public string? Search { get; set; } 
+    public string? Search { get; set; }
     public string? Skills { get; set; }
     public decimal? MinRate { get; set; }
     public decimal? MaxRate { get; set; }
     public string? Availability { get; set; }
-    public int Page { get; set; } =1;
-    public int PageSize { get; set; } =20;
+    public int Page { get; set; } = 1;
+    public int PageSize { get; set; } = 20;
 }
 
 public class FreelancerDetailDto : FreelancerDto
@@ -56,4 +58,18 @@ public class WorkHistoryDto
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public decimal Amount { get; set; }
+}
+
+public class UpdateFreelancerDto
+{
+    public string? Bio { get; set; }
+    public IEnumerable<SkillDto>? Skills { get; set; }
+    public string? Location { get; set; }
+}
+public class SkillDto
+{
+    public int UserId { get; set; }
+    public int SkillId {get;set;}
+    public string Name { get; set; } = string.Empty;
+    public int YearsOfExperience { get; set; }
 }

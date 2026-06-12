@@ -15,6 +15,7 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     private IGenericRepository<Message>? _messages;
     private IGenericRepository<Review>? _reviews;
     private IGenericRepository<Skill>? _skills;
+    private IGenericRepository<UserSkill>? _userSkills;
     
     public IGenericRepository<User> Users => 
         _users ??= new GenericRepository<User>(context);
@@ -36,6 +37,10 @@ public class UnitOfWork(AppDbContext context) : IUnitOfWork
     
     public IGenericRepository<Skill> Skills => 
         _skills ??= new GenericRepository<Skill>(context);
+    
+    public IGenericRepository<UserSkill> UserSkills => 
+        _userSkills ??= new GenericRepository<UserSkill>(context);
+    
     public async Task<int> CompleteAsync()
     {
         return await context.SaveChangesAsync();
